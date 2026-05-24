@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Eye Test | Saawariya Opticals</title>
+  <link rel="icon" href="../logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <div class="announcement-bar">
+    <div class="ticker">
+      <span><i class="fas fa-eye"></i> Free eye testing — No appointment needed for walk-ins</span>
+      <span><i class="fas fa-microscope"></i> Advanced digital refraction technology</span>
+    </div>
+  </div>
+
+  <header class="header" id="mainHeader">
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <img src="../logo.png" alt="Saawariya Opticals Logo">
+        <div class="logo-text">
+          <span class="name">Saawariya Opticals</span>
+          <span class="tagline">We help you look better</span>
+        </div>
+      </a>
+      <div class="search-bar">
+        <input type="text" placeholder="Search products...">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+      <div class="header-actions">
+        <button class="header-action-btn" onclick="openCart()">
+          <i class="fas fa-bag-shopping"></i><span>Cart</span>
+          <span class="cart-count" id="cartCount" style="display:none;">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="main-nav-inner">
+      <div class="nav-item"><a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></div>
+      <div class="nav-item"><a href="products.html?cat=eyeglasses" class="nav-link">Eyeglasses</a></div>
+      <div class="nav-item"><a href="products.html?cat=sunglasses" class="nav-link">Sunglasses</a></div>
+      <div class="nav-item"><a href="products.html?cat=contacts" class="nav-link">Contact Lenses</a></div>
+      <div class="nav-item"><a href="eye-test.html" class="nav-link active"><i class="fas fa-eye" style="color:var(--accent)"></i> Eye Test</a></div>
+      <div class="nav-item"><a href="about.html" class="nav-link">About</a></div>
+      <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+    </div>
+  </nav>
+
+  <div class="page-hero" style="padding:80px 0;">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Eye Test</span>
+      </div>
+      <h1>Free Eye Test</h1>
+      <p>Professional eye examination at both our outlets — completely free</p>
+    </div>
+  </div>
+
+  <!-- Why Get Tested -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">Why It Matters</span>
+        <h2 class="section-title">Regular Eye Tests Are <span>Essential</span></h2>
+        <p class="section-subtitle">Vision problems often develop gradually. A regular eye check helps detect issues early and ensures you always see clearly.</p>
+      </div>
+      <div class="features-grid" data-aos="fade-up">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-search-plus"></i></div>
+          <div class="feature-title">Early Detection</div>
+          <div class="feature-desc">Detect conditions like glaucoma, cataracts, and macular degeneration before symptoms appear.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-glasses"></i></div>
+          <div class="feature-title">Accurate Prescription</div>
+          <div class="feature-desc">An outdated prescription strains your eyes. Keep it current for optimal comfort and clarity.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-laptop"></i></div>
+          <div class="feature-title">Screen Eye Strain</div>
+          <div class="feature-desc">Digital eye strain from screens is common. We assess and recommend the right protection.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-child"></i></div>
+          <div class="feature-title">Children's Vision</div>
+          <div class="feature-desc">Vision problems in children affect learning. Annual checks are vital for academic performance.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What to Expect -->
+  <section class="section bg-light">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+        <div data-aos="fade-right">
+          <span class="section-label">The Examination</span>
+          <h2 class="section-title" style="text-align:left;">What to <span>Expect</span></h2>
+          <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:32px;">
+            Our comprehensive eye examination takes 15–20 minutes and covers all aspects of your visual health.
+          </p>
+          <div class="eyetest-steps">
+            <div class="eyetest-step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h4>Visual Acuity Test</h4>
+                <p>Reading the standard eye chart to measure the sharpness of your vision at distance and near.</p>
+              </div>
+            </div>
+            <div class="eyetest-step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h4>Refraction Assessment</h4>
+                <p>Using a digital phoropter to determine your exact prescription for glasses or contact lenses.</p>
+              </div>
+            </div>
+            <div class="eyetest-step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h4>Eye Health Check</h4>
+                <p>Examination of the front and back of the eye to check for any health concerns.</p>
+              </div>
+            </div>
+            <div class="eyetest-step">
+              <div class="step-number">4</div>
+              <div class="step-content">
+                <h4>Prescription & Consultation</h4>
+                <p>Receive your prescription and personalized recommendations from our optometrist.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-aos="fade-left">
+          <div style="background:white;border-radius:var(--radius-xl);padding:40px;box-shadow:var(--shadow-lg);border:1px solid var(--border);">
+            <h3 style="font-family:Poppins;font-size:1.2rem;margin-bottom:6px;">Book an Appointment</h3>
+            <p style="color:var(--text-muted);font-size:0.875rem;margin-bottom:28px;">Or simply walk in — no appointment needed!</p>
+
+            <form id="eyeTestForm" onsubmit="bookEyeTest(event)">
+              <div style="margin-bottom:16px;">
+                <label style="display:block;font-size:0.875rem;font-weight:600;margin-bottom:8px;">Full Name *</label>
+                <input type="text" placeholder="Your full name" required
+                  style="width:100%;padding:12px 16px;border:2px solid var(--border);border-radius:var(--radius-md);font-family:Inter;">
+              </div>
+              <div style="margin-bottom:16px;">
+                <label style="display:block;font-size:0.875rem;font-weight:600;margin-bottom:8px;">Phone Number *</label>
+                <input type="tel" placeholder="+91 98765 43210" required
+                  style="width:100%;padding:12px 16px;border:2px solid var(--border);border-radius:var(--radius-md);font-family:Inter;">
+              </div>
+              <div style="margin-bottom:16px;">
+                <label style="display:block;font-size:0.875rem;font-weight:600;margin-bottom:8px;">Preferred Outlet</label>
+                <select style="width:100%;padding:12px 16px;border:2px solid var(--border);border-radius:var(--radius-md);font-family:Inter;">
+                  <option>Bhayander West — 60 Feet Road</option>
+                  <option>Bhayander East — Janki Heights</option>
+                </select>
+              </div>
+              <div style="margin-bottom:16px;">
+                <label style="display:block;font-size:0.875rem;font-weight:600;margin-bottom:8px;">Preferred Date</label>
+                <input type="date" style="width:100%;padding:12px 16px;border:2px solid var(--border);border-radius:var(--radius-md);font-family:Inter;">
+              </div>
+              <div style="margin-bottom:24px;">
+                <label style="display:block;font-size:0.875rem;font-weight:600;margin-bottom:8px;">Any specific concerns?</label>
+                <textarea placeholder="e.g., headaches, blurred vision, eye strain..." rows="3"
+                  style="width:100%;padding:12px 16px;border:2px solid var(--border);border-radius:var(--radius-md);font-family:Inter;resize:vertical;"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:14px;">
+                <i class="fas fa-calendar-check"></i> Book Free Eye Test
+              </button>
+              <p style="text-align:center;margin-top:12px;font-size:0.78rem;color:var(--text-muted);">
+                Walk-ins also welcome during business hours (10 AM – 9 PM)
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prescription Guide -->
+  <section class="section">
+    <div class="container" style="max-width:900px;">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">Reading Your Prescription</span>
+        <h2 class="section-title">Understanding Your <span>Results</span></h2>
+        <p class="section-subtitle">Here's a simple guide to understand your eye prescription.</p>
+      </div>
+
+      <div style="background:white;border-radius:var(--radius-xl);padding:40px;border:1px solid var(--border);box-shadow:var(--shadow-sm);" data-aos="fade-up">
+        <div style="overflow-x:auto;">
+          <table style="width:100%;border-collapse:collapse;font-size:0.875rem;">
+            <thead>
+              <tr style="background:var(--primary);color:white;">
+                <th style="padding:14px 16px;text-align:left;border-radius:8px 0 0 0;">Term</th>
+                <th style="padding:14px 16px;text-align:left;">Full Name</th>
+                <th style="padding:14px 16px;text-align:left;border-radius:0 8px 0 0;">What it Means</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid var(--border-light);">
+                <td style="padding:14px 16px;font-weight:700;color:var(--primary);">SPH</td>
+                <td style="padding:14px 16px;color:var(--text-secondary);">Sphere</td>
+                <td style="padding:14px 16px;color:var(--text-secondary);">The lens power needed to correct nearsightedness (–) or farsightedness (+)</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border-light);background:var(--bg);">
+                <td style="padding:14px 16px;font-weight:700;color:var(--primary);">CYL</td>
+                <td style="padding:14px 16px;color:var(--text-secondary);">Cylinder</td>
+                <td style="padding:14px 16px;color:var(--text-secondary);">The lens power for astigmatism correction</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border-light);">
+                <td style="padding:14px 16px;font-weight:700;color:var(--primary);">AXIS</td>
+                <td style="padding:14px 16px;color:var(--text-secondary);">Axis</td>
+                <td style="padding:14px 16px;color:var(--text-secondary);">The orientation of the cylinder lens (0–180 degrees)</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border-light);background:var(--bg);">
+                <td style="padding:14px 16px;font-weight:700;color:var(--primary);">ADD</td>
+                <td style="padding:14px 16px;color:var(--text-secondary);">Addition</td>
+                <td style="padding:14px 16px;color:var(--text-secondary);">Additional power for reading (used in bifocals/progressives)</td>
+              </tr>
+              <tr>
+                <td style="padding:14px 16px;font-weight:700;color:var(--primary);">PD</td>
+                <td style="padding:14px 16px;color:var(--text-secondary);">Pupillary Distance</td>
+                <td style="padding:14px 16px;color:var(--text-secondary);">Distance between the centres of your pupils — critical for accurate lens placement</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin-top:20px;font-size:0.825rem;color:var(--text-muted);font-style:italic;">
+          <i class="fas fa-info-circle" style="color:var(--primary);"></i>
+          Our optometrists will explain your prescription in detail and recommend the most suitable lens options.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:var(--text-primary);color:rgba(255,255,255,0.6);padding:32px 0;text-align:center;">
+    <div class="container">
+      <a href="../index.html" style="color:white;font-family:Poppins;font-weight:700;font-size:1rem;">Saawariya Opticals</a>
+      <p style="margin-top:8px;font-size:0.825rem;">© 2025 All rights reserved. Bhayander, Maharashtra.</p>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3><i class="fas fa-bag-shopping"></i> My Cart <span id="cartItemCount">0</span></h3>
+      <button class="cart-close" onclick="closeCart()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty" id="cartEmpty"><i class="fas fa-bag-shopping"></i><p>Your cart is empty</p></div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none;">
+      <div class="cart-total"><span class="label">Total</span><span class="amount" id="cartTotal">₹0</span></div>
+      <a href="checkout.html" class="btn btn-primary" style="width:100%;justify-content:center;"><i class="fas fa-lock"></i> Checkout</a>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"><i class="fas fa-check-circle"></i><span id="toastMessage"></span></div>
+  <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="../js/products-data.js"></script>
+  <script src="../js/cart.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.AOS) AOS.init({ duration: 700, once: true, offset: 60 });
+      window.addEventListener('scroll', () => {
+        document.getElementById('mainHeader')?.classList.toggle('scrolled', window.scrollY > 80);
+        document.getElementById('scrollTop')?.classList.toggle('show', window.scrollY > 400);
+      }, { passive: true });
+    });
+
+    function bookEyeTest(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('button[type="submit"]');
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Booking...';
+      btn.disabled = true;
+      setTimeout(() => {
+        if (window.Toastify) {
+          Toastify({
+            text: '✓  Eye test appointment requested! We\'ll confirm via WhatsApp.',
+            duration: 5000,
+            gravity: 'bottom',
+            position: 'right',
+            style: { background: 'linear-gradient(135deg,#2b3190,#3d45b8)', borderRadius: '12px', fontFamily: 'Inter', padding: '14px 20px' }
+          }).showToast();
+        }
+        btn.innerHTML = '<i class="fas fa-check"></i> Appointment Requested!';
+        btn.style.background = '#10b981';
+        e.target.reset();
+      }, 1500);
+    }
+
+    function toggleMobileMenu() {}
+  </script>
+</body>
+</html>

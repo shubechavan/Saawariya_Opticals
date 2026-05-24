@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Saawariya Opticals</title>
+  <link rel="icon" href="../logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <div class="announcement-bar">
+    <div class="ticker">
+      <span><i class="fas fa-store"></i> 15+ Years Serving Bhayander</span>
+      <span><i class="fas fa-eye"></i> Free eye testing at both outlets</span>
+    </div>
+  </div>
+
+  <header class="header" id="mainHeader">
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <img src="../logo.png" alt="Saawariya Opticals Logo">
+        <div class="logo-text">
+          <span class="name">Saawariya Opticals</span>
+          <span class="tagline">We help you look better</span>
+        </div>
+      </a>
+      <div class="search-bar">
+        <input type="text" placeholder="Search products...">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+      <div class="header-actions">
+        <button class="header-action-btn" onclick="openCart()">
+          <i class="fas fa-bag-shopping"></i><span>Cart</span>
+          <span class="cart-count" id="cartCount" style="display:none;">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="main-nav-inner">
+      <div class="nav-item"><a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></div>
+      <div class="nav-item"><a href="products.html?cat=eyeglasses" class="nav-link">Eyeglasses</a></div>
+      <div class="nav-item"><a href="products.html?cat=sunglasses" class="nav-link">Sunglasses</a></div>
+      <div class="nav-item"><a href="products.html?cat=contacts" class="nav-link">Contact Lenses</a></div>
+      <div class="nav-item"><a href="eye-test.html" class="nav-link">Eye Test</a></div>
+      <div class="nav-item"><a href="about.html" class="nav-link active">About</a></div>
+      <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <div class="page-hero" style="padding:80px 0;">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>About Us</span>
+      </div>
+      <h1>Our Story</h1>
+      <p>15+ years of trusted eye care in the heart of Bhayander</p>
+    </div>
+  </div>
+
+  <!-- Story Section -->
+  <section class="section">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;" data-aos="fade-up">
+        <div>
+          <span class="section-label">Who We Are</span>
+          <h2 class="section-title" style="text-align:left;">A Legacy of <span>Clear Vision</span></h2>
+          <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:20px;font-size:1rem;">
+            Founded over 15 years ago by <strong>Jaisingh Yadav</strong> and <strong>Bhupsingh Yadav</strong>, with <strong>Vinay Yadav</strong> as Co-Founder, Saawariya Opticals began as a small eyewear shop with a big vision — to make quality eye care accessible to everyone in Bhayander.
+          </p>
+          <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:20px;font-size:1rem;">
+            Over the years, we have grown from a single outlet to two strategically located stores, serving thousands of satisfied customers across Bhayander West, Bhayander East, and surrounding areas including Naigaon and Mira Road.
+          </p>
+          <p style="color:var(--text-secondary);line-height:1.8;font-size:1rem;">
+            Our commitment to combining the latest optical technology with genuine personal care has made us the most trusted name in eyewear in the region. Every customer who walks through our door is treated like family.
+          </p>
+          <div style="display:flex;gap:32px;margin-top:40px;flex-wrap:wrap;">
+            <div style="text-align:center;">
+              <div style="font-family:Poppins;font-size:2.5rem;font-weight:800;color:var(--primary);">15+</div>
+              <div style="font-size:0.85rem;color:var(--text-muted);">Years of Experience</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-family:Poppins;font-size:2.5rem;font-weight:800;color:var(--primary);">5000+</div>
+              <div style="font-size:0.85rem;color:var(--text-muted);">Happy Customers</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-family:Poppins;font-size:2.5rem;font-weight:800;color:var(--primary);">2</div>
+              <div style="font-size:0.85rem;color:var(--text-muted);">City Outlets</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-family:Poppins;font-size:2.5rem;font-weight:800;color:var(--primary);">500+</div>
+              <div style="font-size:0.85rem;color:var(--text-muted);">Frame Styles</div>
+            </div>
+          </div>
+        </div>
+        <div style="background:linear-gradient(145deg,var(--surface-2),var(--border-light));border-radius:var(--radius-xl);padding:60px 40px;text-align:center;">
+          <div style="font-size:8rem;margin-bottom:24px;">👓</div>
+          <div style="font-family:Poppins;font-size:1.5rem;font-weight:700;color:var(--primary);margin-bottom:8px;">Saawariya Opticals</div>
+          <div style="font-size:1rem;color:var(--text-secondary);font-style:italic;">"We help you look better"</div>
+          <div style="margin-top:32px;padding-top:24px;border-top:1px solid var(--border);">
+            <div style="font-size:0.875rem;color:var(--text-muted);">Est. 2009 · Bhayander, Maharashtra</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">Our Purpose</span>
+        <h2 class="section-title">Mission & <span>Vision</span></h2>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;" data-aos="fade-up">
+        <div style="background:white;border-radius:var(--radius-xl);padding:40px;border:1px solid var(--border);">
+          <div style="width:60px;height:60px;background:var(--primary-glow);border-radius:var(--radius-md);
+            display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:var(--primary);margin-bottom:20px;">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h3 style="font-family:Poppins;font-size:1.2rem;margin-bottom:16px;">Our Mission</h3>
+          <p style="color:var(--text-secondary);line-height:1.8;font-size:0.95rem;">
+            At Saawariya Opticals, our mission is to provide high-quality eyewear and eye-care solutions that enhance vision and style. We strive to combine professionalism, trust, and customer care with the latest optical technology to help our customers see and look their best.
+          </p>
+        </div>
+        <div style="background:linear-gradient(135deg,var(--primary),var(--primary-light));border-radius:var(--radius-xl);padding:40px;color:white;">
+          <div style="width:60px;height:60px;background:rgba(255,255,255,0.15);border-radius:var(--radius-md);
+            display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:20px;">
+            <i class="fas fa-eye"></i>
+          </div>
+          <h3 style="font-family:Poppins;font-size:1.2rem;margin-bottom:16px;color:white;">Our Vision</h3>
+          <p style="color:rgba(255,255,255,0.8);line-height:1.8;font-size:0.95rem;">
+            To be the most trusted and innovative eyewear destination in the region, where every customer finds not just perfect vision — but also a style statement that reflects who they are. We envision a future where quality eye care reaches every corner of our community.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">Meet the Family</span>
+        <h2 class="section-title">The People Behind <span>Saawariya</span></h2>
+        <p class="section-subtitle">A family-driven business built on passion for eye care and customer service.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px;" data-aos="fade-up">
+        <div style="text-align:center;">
+          <div style="width:120px;height:120px;background:linear-gradient(135deg,var(--primary),var(--primary-light));
+            border-radius:50%;display:flex;align-items:center;justify-content:center;
+            font-family:Poppins;font-size:2rem;font-weight:700;color:white;margin:0 auto 20px;">JY</div>
+          <h3 style="font-family:Poppins;font-size:1.1rem;font-weight:700;margin-bottom:6px;">Jaisingh Yadav</h3>
+          <p style="font-size:0.875rem;color:var(--primary);font-weight:600;margin-bottom:12px;">Co-Founder & Director</p>
+          <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.7;">
+            With 15+ years of optical expertise, Jaisingh leads with a passion for delivering perfect vision to every customer.
+          </p>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:120px;height:120px;background:linear-gradient(135deg,var(--accent-dark),var(--accent));
+            border-radius:50%;display:flex;align-items:center;justify-content:center;
+            font-family:Poppins;font-size:2rem;font-weight:700;color:white;margin:0 auto 20px;">BY</div>
+          <h3 style="font-family:Poppins;font-size:1.1rem;font-weight:700;margin-bottom:6px;">Bhupsingh Yadav</h3>
+          <p style="font-size:0.875rem;color:var(--primary);font-weight:600;margin-bottom:12px;">Co-Founder & Director</p>
+          <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.7;">
+            Bhupsingh brings strategic vision and deep knowledge of eyewear technology to ensure customers get the best products.
+          </p>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:120px;height:120px;background:linear-gradient(135deg,#10b981,#059669);
+            border-radius:50%;display:flex;align-items:center;justify-content:center;
+            font-family:Poppins;font-size:2rem;font-weight:700;color:white;margin:0 auto 20px;">VY</div>
+          <h3 style="font-family:Poppins;font-size:1.1rem;font-weight:700;margin-bottom:6px;">Vinay Yadav</h3>
+          <p style="font-size:0.875rem;color:var(--primary);font-weight:600;margin-bottom:12px;">Co-Founder</p>
+          <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.7;">
+            Vinay drives business growth and customer experience initiatives, ensuring Saawariya remains the community's top choice.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">What We Stand For</span>
+        <h2 class="section-title">Our Core <span>Values</span></h2>
+      </div>
+      <div class="features-grid" data-aos="fade-up">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-heart"></i></div>
+          <div class="feature-title">Customer First</div>
+          <div class="feature-desc">Every decision we make puts our customers at the centre. Your satisfaction and comfort is our priority.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-medal"></i></div>
+          <div class="feature-title">Quality Commitment</div>
+          <div class="feature-desc">We never compromise on product quality. Every frame, lens and solution we offer meets the highest standards.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-handshake"></i></div>
+          <div class="feature-title">Trust & Integrity</div>
+          <div class="feature-desc">Honest advice, fair pricing, and genuine care — the foundations of every customer relationship we build.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-lightbulb"></i></div>
+          <div class="feature-title">Continuous Innovation</div>
+          <div class="feature-desc">We embrace the latest in optical technology to offer cutting-edge solutions for our customers' needs.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));padding:80px 0;text-align:center;color:white;">
+    <div class="container" data-aos="fade-up">
+      <h2 style="font-size:2rem;margin-bottom:12px;">Ready to Find Your Perfect Pair?</h2>
+      <p style="color:rgba(255,255,255,0.75);margin-bottom:32px;font-size:1rem;">Visit either of our outlets or browse our collection online.</p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+        <a href="products.html" class="btn btn-accent"><i class="fas fa-glasses"></i> Shop Now</a>
+        <a href="contact.html" class="btn btn-white"><i class="fas fa-map-marker-alt"></i> Find Our Outlets</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer simplified -->
+  <footer style="background:var(--text-primary);color:rgba(255,255,255,0.6);padding:32px 0;text-align:center;">
+    <div class="container">
+      <a href="../index.html" style="color:white;font-family:Poppins;font-weight:700;font-size:1rem;">Saawariya Opticals</a>
+      <p style="margin-top:8px;font-size:0.825rem;">© 2025 All rights reserved. Bhayander, Maharashtra.</p>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3><i class="fas fa-bag-shopping"></i> My Cart <span id="cartItemCount">0</span></h3>
+      <button class="cart-close" onclick="closeCart()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty" id="cartEmpty">
+        <i class="fas fa-bag-shopping"></i><p>Your cart is empty</p>
+      </div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none;">
+      <div class="cart-total"><span class="label">Total</span><span class="amount" id="cartTotal">₹0</span></div>
+      <a href="checkout.html" class="btn btn-primary" style="width:100%;justify-content:center;"><i class="fas fa-lock"></i> Checkout</a>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"><i class="fas fa-check-circle"></i><span id="toastMessage"></span></div>
+  <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt/dist/vanilla-tilt.min.js"></script>
+  <script src="../js/products-data.js"></script>
+  <script src="../js/cart.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.AOS) AOS.init({ duration: 700, once: true, offset: 60 });
+      window.addEventListener('scroll', () => {
+        document.getElementById('mainHeader')?.classList.toggle('scrolled', window.scrollY > 80);
+        document.getElementById('scrollTop')?.classList.toggle('show', window.scrollY > 400);
+      }, { passive: true });
+    });
+    function toggleMobileMenu() {}
+  </script>
+</body>
+</html>

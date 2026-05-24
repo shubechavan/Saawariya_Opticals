@@ -1,0 +1,14 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+*.swp
+
+# CDR source files (keep PNG/JPG/PDF)
+*.cdr
+
+# Local temp
+*.log

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Saawariya Opticals</title>
+  <link rel="icon" href="../logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .contact-form-group {
+      margin-bottom: 20px;
+    }
+    .contact-form-group label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .contact-form-group input,
+    .contact-form-group textarea,
+    .contact-form-group select {
+      width: 100%;
+      padding: 14px 18px;
+      border: 2px solid var(--border);
+      border-radius: var(--radius-md);
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      background: var(--white);
+      transition: var(--transition);
+      font-family: 'Inter', sans-serif;
+    }
+    .contact-form-group input:focus,
+    .contact-form-group textarea:focus,
+    .contact-form-group select:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px var(--primary-glow);
+      outline: none;
+    }
+    .contact-form-group textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+    .contact-info-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      display: flex;
+      gap: 20px;
+      transition: var(--transition);
+    }
+    .contact-info-card:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-md);
+    }
+    .contact-info-icon {
+      width: 52px;
+      height: 52px;
+      background: var(--primary-glow);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .contact-info-content h4 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+    }
+    .contact-info-content p {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    .map-embed {
+      width: 100%;
+      height: 280px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: linear-gradient(145deg, var(--surface-2), var(--border-light));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 12px;
+      color: var(--text-muted);
+    }
+    .map-embed i { font-size: 3rem; color: var(--primary); opacity: 0.5; }
+    .faq-item {
+      border-bottom: 1px solid var(--border-light);
+      padding: 20px 0;
+    }
+    .faq-question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 600;
+      color: var(--text-primary);
+      cursor: pointer;
+      gap: 16px;
+      font-size: 0.95rem;
+    }
+    .faq-question i {
+      color: var(--primary);
+      font-size: 0.8rem;
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+    .faq-answer {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 200px;
+      padding-top: 12px;
+    }
+    .faq-item.open .faq-question i {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="announcement-bar">
+    <div class="ticker">
+      <span><i class="fas fa-phone"></i> Visit us at either outlet — no appointment needed for walk-ins</span>
+      <span><i class="fas fa-eye"></i> Free eye testing daily</span>
+    </div>
+  </div>
+
+  <header class="header" id="mainHeader">
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <img src="../logo.png" alt="Saawariya Opticals Logo">
+        <div class="logo-text">
+          <span class="name">Saawariya Opticals</span>
+          <span class="tagline">We help you look better</span>
+        </div>
+      </a>
+      <div class="search-bar">
+        <input type="text" placeholder="Search products...">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+      <div class="header-actions">
+        <button class="header-action-btn" onclick="openCart()">
+          <i class="fas fa-bag-shopping"></i><span>Cart</span>
+          <span class="cart-count" id="cartCount" style="display:none;">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="main-nav-inner">
+      <div class="nav-item"><a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></div>
+      <div class="nav-item"><a href="products.html?cat=eyeglasses" class="nav-link">Eyeglasses</a></div>
+      <div class="nav-item"><a href="products.html?cat=sunglasses" class="nav-link">Sunglasses</a></div>
+      <div class="nav-item"><a href="products.html?cat=contacts" class="nav-link">Contact Lenses</a></div>
+      <div class="nav-item"><a href="eye-test.html" class="nav-link">Eye Test</a></div>
+      <div class="nav-item"><a href="about.html" class="nav-link">About</a></div>
+      <div class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></div>
+    </div>
+  </nav>
+
+  <div class="page-hero" style="padding:80px 0;">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Contact Us</span>
+      </div>
+      <h1>Get in Touch</h1>
+      <p>We're here to help — visit us, call us, or send a message</p>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <section class="section">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1.2fr;gap:64px;align-items:start;">
+
+        <!-- Left: Info -->
+        <div data-aos="fade-right">
+          <span class="section-label">Reach Us</span>
+          <h2 class="section-title" style="text-align:left;font-size:2rem;">We'd Love to <span>Hear From You</span></h2>
+          <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:40px;">
+            Walk in to either of our outlets anytime during business hours, or reach out below. Our opticians are always ready to help you find the perfect eyewear.
+          </p>
+
+          <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:40px;">
+            <div class="contact-info-card">
+              <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-info-content">
+                <h4>Bhayander West Outlet</h4>
+                <p>Shop No. 11, Kamala Park, Opposite Rajasthan Hall,<br>60 Feet Road, Bhayander West, Maharashtra.</p>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-info-content">
+                <h4>Bhayander East Outlet</h4>
+                <p>Shop No. 21, Janki Heights, Near Mithalal Jain Bungalow,<br>Bhayander East, Maharashtra.</p>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="contact-info-icon"><i class="fas fa-clock"></i></div>
+              <div class="contact-info-content">
+                <h4>Business Hours</h4>
+                <p>Monday – Sunday: 10:00 AM – 9:00 PM<br>Open all days including public holidays</p>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="contact-info-icon"><i class="fab fa-whatsapp"></i></div>
+              <div class="contact-info-content">
+                <h4>WhatsApp Us</h4>
+                <p>Message us for quick assistance, product queries, or to share your prescription</p>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-info-content">
+                <h4>Email</h4>
+                <p>info@saawariyaopticals.com</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Links -->
+          <div>
+            <p style="font-size:0.85rem;font-weight:600;color:var(--text-primary);margin-bottom:14px;">Follow Us</p>
+            <div class="social-links">
+              <a href="#" class="social-link" style="background:var(--bg);color:var(--text-secondary);" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-link" style="background:var(--bg);color:var(--text-secondary);" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="social-link" style="background:var(--bg);color:var(--text-secondary);" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a href="#" class="social-link" style="background:var(--bg);color:var(--text-secondary);" aria-label="Google">
+                <i class="fab fa-google"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div data-aos="fade-left">
+          <div style="background:white;border-radius:var(--radius-xl);padding:40px;box-shadow:var(--shadow-lg);border:1px solid var(--border);">
+            <h3 style="font-family:Poppins;font-size:1.3rem;font-weight:700;margin-bottom:8px;">Send Us a Message</h3>
+            <p style="color:var(--text-muted);font-size:0.875rem;margin-bottom:28px;">We usually respond within 24 hours</p>
+
+            <form id="contactForm" onsubmit="submitContactForm(event)">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+                <div class="contact-form-group">
+                  <label for="firstName">First Name *</label>
+                  <input type="text" id="firstName" placeholder="Rajesh" required>
+                </div>
+                <div class="contact-form-group">
+                  <label for="lastName">Last Name</label>
+                  <input type="text" id="lastName" placeholder="Kumar">
+                </div>
+              </div>
+              <div class="contact-form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" placeholder="rajesh@example.com" required>
+              </div>
+              <div class="contact-form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="+91 98765 43210">
+              </div>
+              <div class="contact-form-group">
+                <label for="subject">Subject</label>
+                <select id="subject">
+                  <option value="">Select a subject...</option>
+                  <option value="product">Product Inquiry</option>
+                  <option value="eyetest">Book Eye Test</option>
+                  <option value="prescription">Prescription Help</option>
+                  <option value="order">Order Status</option>
+                  <option value="feedback">Feedback</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="contact-form-group">
+                <label for="message">Message *</label>
+                <textarea id="message" placeholder="Tell us how we can help you..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:16px;">
+                <i class="fas fa-paper-plane"></i>
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">Our Locations</span>
+        <h2 class="section-title">Find Our <span>Outlets</span></h2>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;">
+        <div data-aos="fade-right">
+          <h3 style="font-family:Poppins;font-size:1rem;font-weight:600;margin-bottom:16px;color:var(--text-primary);">
+            <i class="fas fa-map-marker-alt" style="color:var(--primary);"></i> Bhayander West
+          </h3>
+          <div class="map-embed">
+            <i class="fas fa-map-location-dot"></i>
+            <p style="font-size:0.85rem;text-align:center;color:var(--text-secondary);">
+              Shop No. 11, Kamala Park<br>60 Feet Road, Bhayander West
+            </p>
+          </div>
+          <a href="https://maps.google.com/?q=Bhayander+West+60+Feet+Road" target="_blank"
+            class="btn btn-outline" style="width:100%;justify-content:center;margin-top:12px;">
+            <i class="fas fa-map"></i> Open in Google Maps
+          </a>
+        </div>
+        <div data-aos="fade-left">
+          <h3 style="font-family:Poppins;font-size:1rem;font-weight:600;margin-bottom:16px;color:var(--text-primary);">
+            <i class="fas fa-map-marker-alt" style="color:var(--primary);"></i> Bhayander East
+          </h3>
+          <div class="map-embed" style="background:linear-gradient(145deg,#e3f2fd,#bbdefb);">
+            <i class="fas fa-map-location-dot"></i>
+            <p style="font-size:0.85rem;text-align:center;color:var(--text-secondary);">
+              Shop No. 21, Janki Heights<br>Near Mithalal Jain Bungalow, Bhayander East
+            </p>
+          </div>
+          <a href="https://maps.google.com/?q=Bhayander+East+Janki+Heights" target="_blank"
+            class="btn btn-outline" style="width:100%;justify-content:center;margin-top:12px;">
+            <i class="fas fa-map"></i> Open in Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section">
+    <div class="container" style="max-width:800px;">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">Common Questions</span>
+        <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+      </div>
+
+      <div data-aos="fade-up">
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question">
+            Do you offer home delivery for glasses?
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">Yes, we do offer delivery for orders placed through our website. Standard delivery is available across Mumbai Metropolitan Region. Free delivery on orders above ₹999.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question">
+            How long does it take to get prescription glasses made?
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">For standard prescriptions, we can typically have your glasses ready in 24–48 hours. For specialized lenses (high index, progressive, photochromic), it may take 3–5 days. We will inform you of the exact timeline at the time of order.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question">
+            Is the eye test really free?
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">Yes! Eye testing is completely free at both our outlets. No appointment needed — just walk in. Our certified optometrists will conduct a comprehensive examination including visual acuity, eye pressure check, and prescription assessment.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question">
+            Do you repair glasses frames?
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">Yes, we offer frame repairs including nose pad replacement, hinge repair, and general adjustments. For frames purchased from us, basic adjustments are complimentary. Visit either outlet for an assessment.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question">
+            Can I bring my prescription from another doctor?
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">Absolutely! You are welcome to bring any valid prescription (typically up to 1–2 years old) and we will make your glasses accordingly. Our opticians will guide you on the best lens options for your prescription.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question">
+            What warranty do you offer on frames and lenses?
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">All frames carry a minimum 6-month warranty against manufacturing defects. Branded frames (Ray-Ban, Titan, Oakley, etc.) come with their respective brand warranties. Lenses are covered for coating peeling within 1 year under normal use conditions.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background:var(--text-primary);color:rgba(255,255,255,0.6);padding:32px 0;text-align:center;">
+    <div class="container">
+      <a href="../index.html" style="color:white;font-family:Poppins;font-weight:700;font-size:1rem;">Saawariya Opticals</a>
+      <p style="margin-top:8px;font-size:0.825rem;">© 2025 All rights reserved. Bhayander, Maharashtra.</p>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3><i class="fas fa-bag-shopping"></i> My Cart <span id="cartItemCount">0</span></h3>
+      <button class="cart-close" onclick="closeCart()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty" id="cartEmpty"><i class="fas fa-bag-shopping"></i><p>Your cart is empty</p></div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none;">
+      <div class="cart-total"><span class="label">Total</span><span class="amount" id="cartTotal">₹0</span></div>
+      <a href="checkout.html" class="btn btn-primary" style="width:100%;justify-content:center;"><i class="fas fa-lock"></i> Checkout</a>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"><i class="fas fa-check-circle"></i><span id="toastMessage"></span></div>
+  <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="../js/products-data.js"></script>
+  <script src="../js/cart.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.AOS) AOS.init({ duration: 700, once: true, offset: 60 });
+      window.addEventListener('scroll', () => {
+        document.getElementById('mainHeader')?.classList.toggle('scrolled', window.scrollY > 80);
+        document.getElementById('scrollTop')?.classList.toggle('show', window.scrollY > 400);
+      }, { passive: true });
+    });
+
+    function toggleFaq(item) {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+
+    function submitContactForm(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('button[type="submit"]');
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+      btn.disabled = true;
+      setTimeout(() => {
+        if (window.Toastify) {
+          Toastify({
+            text: '✓  Message sent! We\'ll get back to you within 24 hours.',
+            duration: 4000,
+            gravity: 'bottom',
+            position: 'right',
+            style: { background: 'linear-gradient(135deg,#10b981,#059669)', borderRadius: '12px', fontFamily: 'Inter', padding: '14px 20px' }
+          }).showToast();
+        }
+        btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+        btn.style.background = '#10b981';
+        e.target.reset();
+      }, 1500);
+    }
+
+    function toggleMobileMenu() {}
+  </script>
+</body>
+</html>
