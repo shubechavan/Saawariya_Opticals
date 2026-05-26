@@ -366,6 +366,12 @@
       return { service, store, date, time, name, phone, email, age, notes };
     }
 
+    // Store-specific WhatsApp numbers
+    const STORE_WA = {
+      'Bhayander West': '919920892344',
+      'Bhayander East': '918976797674'
+    };
+
     function bookAppt(e) {
       e.preventDefault();
       const f = getFormData();
@@ -385,12 +391,13 @@
       succ.style.display = 'block';
       document.getElementById('apptSummary').textContent =
         `${f.service} at our ${f.store} outlet on ${f.date} at ${f.time}.`;
-      // Open WhatsApp
-      setTimeout(() => window.open(`https://wa.me/919999999999?text=${msg}`, '_blank'), 800);
+      // Route to the selected store's WhatsApp
+      const number = STORE_WA[f.store] || STORE_WA['Bhayander West'];
+      setTimeout(() => window.open(`https://wa.me/${number}?text=${msg}`, '_blank'), 800);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // WhatsApp shortcut
+    // WhatsApp shortcut — also routes to selected store
     document.getElementById('apptWhatsapp').addEventListener('click', e => {
       const f = getFormData();
       const msg = encodeURIComponent(
@@ -399,7 +406,8 @@
         (f.time ? ` at ${f.time}` : '') +
         ` at your ${f.store} outlet.\n\nName: ${f.name || '[your name]'}\nPhone: ${f.phone || ''}`
       );
-      e.currentTarget.href = `https://wa.me/919999999999?text=${msg}`;
+      const number = STORE_WA[f.store] || STORE_WA['Bhayander West'];
+      e.currentTarget.href = `https://wa.me/${number}?text=${msg}`;
     });
 
     if (window.Lenis) {
@@ -408,7 +416,7 @@
       requestAnimationFrame(raf);
     }
     const fab = document.createElement('a');
-    fab.href = 'https://wa.me/919999999999';
+    fab.href = 'https://wa.me/919920892344';
     fab.target = '_blank';
     fab.className = 'whatsapp-fab';
     fab.innerHTML = '<i class="fab fa-whatsapp"></i>';

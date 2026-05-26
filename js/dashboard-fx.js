@@ -176,7 +176,7 @@
   /* ---------- 8. Floating WhatsApp FAB ---------- */
   if (!document.querySelector('.whatsapp-fab')) {
     const fab = document.createElement('a');
-    fab.href = 'https://wa.me/919999999999?text=Hi%20Saawariya%20Opticals%2C%20I%27d%20like%20to%20enquire%20about';
+    fab.href = 'https://wa.me/919920892344?text=Hi%20Saawariya%20Opticals%2C%20I%27d%20like%20to%20enquire%20about';
     fab.target = '_blank';
     fab.rel = 'noopener';
     fab.className = 'whatsapp-fab';

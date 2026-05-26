@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git config *)",
+      "Bash(git commit --amend --reset-author -m 'Initial commit: Saawariya Opticals e-commerce website *)",
+      "Bash(git remote *)",
+      "Bash(git branch *)",
+      "Bash(git push *)",
+      "Bash(git add *)",
+      "Bash(git commit -m 'Make site fully mobile-friendly across all pages *)"
+    ]
+  }
+}
