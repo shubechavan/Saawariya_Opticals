@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frequently asked questions about glasses, contact lenses, eye testing, warranty, delivery and more at Saawariya Opticals.">
+  <title>FAQ | Saawariya Opticals</title>
+  <meta name="theme-color" content="#2b3190">
+  <link rel="icon" type="image/png" href="../logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+
+  <!-- FAQ Schema for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Is eye testing free at Saawariya Opticals?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, eye testing is completely FREE at both our outlets (Bhayander West and East). No appointment is required for walk-ins, but you can book online for guaranteed time slots." } },
+      { "@type": "Question", "name": "How long does it take to get my glasses ready?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most prescription glasses are ready within 24-48 hours. Simple single-vision lenses can be ready the same day. Complex progressive or high-power lenses may take 3-5 days." } },
+      { "@type": "Question", "name": "Do you provide warranty on frames and lenses?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, we provide a 1-year manufacturer warranty on all branded frames and a 6-month warranty on lenses against manufacturing defects." } },
+      { "@type": "Question", "name": "What payment methods do you accept?",
+        "acceptedAnswer": { "@type": "Answer", "text": "We accept Cash, UPI (PhonePe, Google Pay, Paytm), Debit/Credit Cards, and Net Banking. EMI options are available on purchases above ₹3,000." } }
+    ]
+  }
+  </script>
+  <style>
+    .faq-section { padding: 40px 0 80px; }
+    .faq-categories {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin: 28px 0 40px;
+    }
+    .faq-cat-btn {
+      padding: 10px 20px;
+      border: 1.5px solid var(--border);
+      background: #fff;
+      border-radius: 999px;
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.25s;
+    }
+    .faq-cat-btn:hover { border-color: var(--primary); color: var(--primary); }
+    .faq-cat-btn.active {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: #fff;
+      border-color: var(--primary);
+      box-shadow: 0 8px 18px -6px rgba(43,49,144,0.4);
+    }
+    .faq-list { max-width: 880px; margin: 0 auto; }
+    .faq-item {
+      background: #fff;
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      margin-bottom: 14px;
+      overflow: hidden;
+      transition: all 0.3s;
+      box-shadow: 0 2px 8px rgba(43,49,144,0.04);
+    }
+    .faq-item:hover { border-color: var(--primary-light); box-shadow: 0 8px 20px rgba(43,49,144,0.08); }
+    .faq-item.open {
+      border-color: var(--primary);
+      box-shadow: 0 12px 30px -8px rgba(43,49,144,0.2);
+    }
+    .faq-q {
+      width: 100%;
+      padding: 20px 22px;
+      background: transparent;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--text-primary);
+      text-align: left;
+    }
+    .faq-q i {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 10px;
+      background: var(--primary-glow);
+      color: var(--primary);
+      display: grid;
+      place-items: center;
+      font-size: 0.85rem;
+      transition: transform 0.3s;
+    }
+    .faq-item.open .faq-q i { transform: rotate(180deg); background: var(--primary); color: #fff; }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+      padding: 0 22px;
+    }
+    .faq-item.open .faq-a {
+      max-height: 800px;
+      padding: 0 22px 22px;
+    }
+    .faq-a-inner {
+      padding-top: 6px;
+      border-top: 1px dashed var(--border);
+      color: var(--text-secondary);
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+    .faq-a-inner a { color: var(--primary); font-weight: 600; }
+    .faq-tag {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-right: 8px;
+    }
+    .tag-pop { background: #fef3c7; color: #b45309; }
+    .tag-new { background: #d1fae5; color: #065f46; }
+    @media (max-width: 600px) {
+      .faq-q { padding: 16px 18px; font-size: 0.92rem; }
+      .faq-item.open .faq-a { padding: 0 18px 18px; }
+      .faq-cat-btn { padding: 8px 14px; font-size: 0.78rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="announcement-bar">
+    <div class="ticker">
+      <span><i class="fas fa-circle-question"></i> Got a question? You'll likely find the answer below</span>
+      <span><i class="fas fa-headset"></i> Still stuck? Call or WhatsApp us anytime</span>
+    </div>
+  </div>
+
+  <header class="header" id="mainHeader">
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <img src="../logo.png" alt="Saawariya Opticals Logo">
+        <div class="logo-text"><span class="name">Saawariya Opticals</span><span class="tagline">We help you look better</span></div>
+      </a>
+      <div class="search-bar">
+        <input type="text" placeholder="Search FAQs..." autocomplete="off" id="faqSearch">
+        <button type="button"><i class="fas fa-search"></i></button>
+      </div>
+      <div class="header-actions">
+        <button class="header-action-btn" onclick="window.location.href='appointment.html'"><i class="fas fa-calendar-check"></i><span>Appointment</span></button>
+        <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="main-nav-inner">
+      <div class="nav-item"><a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></div>
+      <div class="nav-item"><a href="frames.html" class="nav-link"><i class="fas fa-glasses"></i> Frames</a></div>
+      <div class="nav-item"><a href="sunglasses.html" class="nav-link"><i class="fas fa-sun"></i> Sunglasses</a></div>
+      <div class="nav-item"><a href="contact-lenses.html" class="nav-link"><i class="fas fa-circle-dot"></i> Contact Lenses</a></div>
+      <div class="nav-item"><a href="reading-frames.html" class="nav-link"><i class="fas fa-book-open-reader"></i> Reading Frames</a></div>
+      <div class="nav-item"><a href="store-locator.html" class="nav-link"><i class="fas fa-location-dot"></i> Stores</a></div>
+      <div class="nav-item"><a href="appointment.html" class="nav-link"><i class="fas fa-calendar-check" style="color:var(--accent)"></i> Book Appointment</a></div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-panel">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;">
+        <a href="../index.html" class="logo" style="gap:10px;"><img src="../logo.png" alt="" style="height:40px;"><span style="font-family:Poppins;font-weight:700;color:var(--primary);font-size:0.95rem;">Saawariya Opticals</span></a>
+        <button onclick="toggleMobileMenu()" style="background:var(--bg);border:none;width:36px;height:36px;border-radius:8px;font-size:1.1rem;cursor:pointer;">✕</button>
+      </div>
+      <nav style="display:flex;flex-direction:column;gap:4px;">
+        <a href="../index.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">🏠 Home</a>
+        <a href="frames.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">👓 Frames</a>
+        <a href="sunglasses.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">🕶️ Sunglasses</a>
+        <a href="contact-lenses.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">🔵 Contact Lenses</a>
+        <a href="reading-frames.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">📖 Reading Frames</a>
+        <a href="store-locator.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">📍 Stores</a>
+        <a href="appointment.html" style="padding:12px 16px;border-radius:8px;font-weight:500;background:linear-gradient(135deg,#e8b84b,#c99a30);color:#fff;">📅 Book Appointment</a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="page-hero-blob b1"></div>
+      <div class="page-hero-blob b2"></div>
+      <div class="container">
+        <div class="page-hero-inner" data-aos="fade-up">
+          <div class="breadcrumb">
+            <a href="../index.html">Home</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>FAQ</span>
+          </div>
+          <div class="page-icon" style="background:linear-gradient(135deg, #06b6d4, #38bdf8);"><i class="fas fa-circle-question"></i></div>
+          <h1>Frequently Asked <span class="accent">Questions</span></h1>
+          <p>Everything you wanted to know about our products, services, eye testing, warranty, delivery & more — answered.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section">
+      <div class="container">
+
+        <!-- Category Filter -->
+        <div class="faq-categories" data-aos="fade-up">
+          <button class="faq-cat-btn active" data-cat="all"><i class="fas fa-th"></i> All</button>
+          <button class="faq-cat-btn" data-cat="eye-test"><i class="fas fa-eye"></i> Eye Test</button>
+          <button class="faq-cat-btn" data-cat="frames"><i class="fas fa-glasses"></i> Frames &amp; Lenses</button>
+          <button class="faq-cat-btn" data-cat="contacts"><i class="fas fa-circle-dot"></i> Contact Lenses</button>
+          <button class="faq-cat-btn" data-cat="delivery"><i class="fas fa-truck-fast"></i> Delivery &amp; Warranty</button>
+          <button class="faq-cat-btn" data-cat="payment"><i class="fas fa-credit-card"></i> Payment</button>
+        </div>
+
+        <div class="faq-list" id="faqList"></div>
+
+        <!-- Still need help -->
+        <div style="margin-top: 60px; padding: 40px 30px; background:linear-gradient(135deg, var(--primary), var(--primary-dark)); border-radius:24px; text-align:center; color:#fff;" data-aos="zoom-in">
+          <h2 style="font-family: Poppins; font-size: 1.7rem; margin-bottom: 12px;">Didn't find your answer?</h2>
+          <p style="opacity: 0.9; margin-bottom: 24px;">Our team is one tap away. Call us, WhatsApp us, or visit a store.</p>
+          <div style="display:flex; gap: 12px; justify-content:center; flex-wrap:wrap;">
+            <a href="tel:+919920892344" class="btn btn-accent"><i class="fas fa-phone"></i> Call West Store</a>
+            <a href="tel:+918976797674" class="btn btn-accent" style="background:linear-gradient(135deg,#e8b84b,#c99a30);"><i class="fas fa-phone"></i> Call East Store</a>
+            <a href="https://wa.me/919920892344" target="_blank" class="btn" style="background:#25d366;color:#fff;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container" style="text-align:center; padding: 30px 0;">
+      <p style="color: var(--text-secondary);">© 2026 Saawariya Opticals · "We help you look better"</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+  <script>
+    AOS.init({ duration: 700, once: true });
+    function toggleMobileMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+      document.getElementById('hamburger').classList.toggle('active');
+    }
+
+    const FAQS = [
+      // EYE TEST
+      { cat:'eye-test', tag:'popular', q:'Is eye testing free at Saawariya Opticals?',
+        a:'Yes! Eye testing is completely <strong>FREE</strong> at both our Bhayander West &amp; East outlets. No appointment is needed for walk-ins, but you can <a href="appointment.html">book online</a> for a guaranteed time slot.' },
+      { cat:'eye-test', q:'How long does an eye test take?',
+        a:'A standard eye test takes about <strong>15-20 minutes</strong>. Complex cases (progressive lenses, children, very high power) may take up to 30 minutes.' },
+      { cat:'eye-test', q:'How often should I get my eyes tested?',
+        a:'Adults under 40: every 2 years. Adults 40-60: every 1-2 years. Adults over 60: every year. Kids: yearly. If you experience headaches, blurry vision, or eye strain, get tested sooner.' },
+      { cat:'eye-test', q:'Should I bring my old glasses for the eye test?',
+        a:'Yes, please bring your current glasses or prescription. It helps us compare the change in power and recommend better solutions.' },
+      { cat:'eye-test', q:'Can children get their eyes tested here?',
+        a:'Absolutely. We have child-friendly eye-testing equipment and patient optometrists. We recommend starting eye tests for kids from age 5.' },
+
+      // FRAMES & LENSES
+      { cat:'frames', tag:'popular', q:'How long does it take to get my glasses ready?',
+        a:'Most single-vision glasses are ready <strong>within 24-48 hours</strong>. Same-day delivery for simple prescriptions if order is placed before 2 PM. Progressive lenses or high-power prescriptions take 3-5 working days.' },
+      { cat:'frames', q:'What\'s the price range of frames?',
+        a:'Our frames start from <strong>₹999</strong> (Vincent Chase, Lenskart, Fastrack basics) and go up to <strong>₹15,000+</strong> for designer brands like Gucci, Ray-Ban Premium. Most popular styles are in the ₹1,500-₹4,000 range.' },
+      { cat:'frames', q:'Which lens type should I choose — single vision, bifocal, or progressive?',
+        a:'<strong>Single vision</strong>: one prescription (distance OR near). <strong>Bifocal</strong>: two prescriptions with a visible line. <strong>Progressive</strong>: smooth transition between distance, intermediate, near. Visit our <a href="lens-guide.html">Lens Guide</a> for a detailed comparison.' },
+      { cat:'frames', q:'Do you offer anti-glare and blue-light coatings?',
+        a:'Yes. <strong>Anti-glare (₹300-800 extra)</strong> reduces reflections — great for night driving. <strong>Blue-light coating (₹500-1200 extra)</strong> protects from screen glare — recommended if you spend 4+ hours daily on phone/laptop.' },
+      { cat:'frames', tag:'new', q:'Can I upload my prescription instead of visiting the store?',
+        a:'Yes! On our <a href="frames.html#uploadRx">Frames page</a>, you can upload a clear photo of your doctor\'s prescription. We\'ll prepare your lenses and call you to confirm details.' },
+      { cat:'frames', q:'What if my power changes within a few months of buying glasses?',
+        a:'If there\'s a significant power change within 90 days of purchase (and the new prescription is from us or a verified eye doctor), we offer <strong>free lens replacement</strong>. Frame cost remains as-is.' },
+
+      // CONTACT LENSES
+      { cat:'contacts', tag:'popular', q:'Which contact lens brands do you carry?',
+        a:'We stock <strong>Polylite, Freshlook, Bausch &amp; Lomb, Acme, and Copper Vision</strong> — all 100% authentic from official distributors. Configure your lens at our <a href="contact-lenses.html">Contact Lens Configurator</a>.' },
+      { cat:'contacts', q:'How do I choose between daily, monthly, or yearly contact lenses?',
+        a:'<strong>Daily (1-day)</strong>: most hygienic, no cleaning. Best for occasional use. <strong>Monthly</strong>: economical for regular wearers. <strong>Yearly</strong>: cheapest per-day cost but needs careful cleaning. We recommend monthly for most beginners.' },
+      { cat:'contacts', q:'Do colored contact lenses come with power?',
+        a:'Yes. Colored lenses are available in both <strong>Plano (0.00 power, cosmetic only)</strong> and <strong>prescription powers</strong> from -10.00 to +10.00 in 0.25 steps. Select "Plano" during configuration if you only want the color.' },
+      { cat:'contacts', q:'Is it safe to wear contact lenses every day?',
+        a:'Yes, if you follow hygiene: never sleep with lenses (unless extended-wear), clean monthly/yearly lenses daily with proper solution, and never share. We provide a free care guide with every order.' },
+
+      // DELIVERY & WARRANTY
+      { cat:'delivery', tag:'popular', q:'Do you provide warranty?',
+        a:'<strong>Frames: 1-year manufacturer warranty</strong> against breakage/defects. <strong>Lenses: 6 months</strong> against coating peeling, cracks. <strong>Contact lenses: until expiry date</strong> printed on box.' },
+      { cat:'delivery', q:'Do you deliver glasses to my home?',
+        a:'Yes. <strong>FREE delivery</strong> within Bhayander/Mira Road/Naigaon for orders above ₹999. Outside this area, shipping charges apply. Most orders delivered same-day or next-day.' },
+      { cat:'delivery', q:'Can I return or exchange my glasses?',
+        a:'Frames can be exchanged within <strong>7 days</strong> of purchase (unused condition). Lenses customized to your prescription cannot be returned but can be remade if there\'s a power mismatch. Contact lenses (sealed boxes) are exchangeable within 15 days.' },
+
+      // PAYMENT
+      { cat:'payment', tag:'popular', q:'What payment methods do you accept?',
+        a:'<strong>Cash, UPI</strong> (PhonePe, Google Pay, Paytm, BHIM), <strong>Debit/Credit Cards</strong> (Visa, Mastercard, RuPay), and <strong>Net Banking</strong>. We do not accept American Express.' },
+      { cat:'payment', q:'Do you offer EMI?',
+        a:'Yes — EMI available on credit card purchases above <strong>₹3,000</strong>. Tenure: 3, 6, 9, or 12 months. EMI charges depend on your bank.' },
+      { cat:'payment', q:'Can I pay partial advance and balance on delivery?',
+        a:'For custom prescription orders over ₹2,000, you can pay <strong>50% advance</strong> and balance on delivery (within Bhayander/Mira Rd/Naigaon only). Call any store to arrange.' }
+    ];
+
+    let activeCat = 'all';
+    let searchTerm = '';
+
+    function render() {
+      const list = document.getElementById('faqList');
+      const filtered = FAQS.filter(f => {
+        const catOk = activeCat === 'all' || f.cat === activeCat;
+        const searchOk = !searchTerm || (f.q + ' ' + f.a).toLowerCase().includes(searchTerm.toLowerCase());
+        return catOk && searchOk;
+      });
+      if (!filtered.length) {
+        list.innerHTML = `<div style="text-align:center;padding:40px;color:var(--text-muted);">
+          <i class="fas fa-search" style="font-size:2rem;margin-bottom:12px;"></i>
+          <p>No matching questions. Try another keyword or category.</p>
+        </div>`;
+        return;
+      }
+      list.innerHTML = filtered.map((f, i) => `
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="${i*30}">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            <span>
+              ${f.tag === 'popular' ? '<span class="faq-tag tag-pop">🔥 Popular</span>' : ''}
+              ${f.tag === 'new' ? '<span class="faq-tag tag-new">✨ New</span>' : ''}
+              ${f.q}
+            </span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">${f.a}</div></div>
+        </div>
+      `).join('');
+      AOS.refresh();
+    }
+
+    document.querySelectorAll('.faq-cat-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.faq-cat-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeCat = btn.dataset.cat;
+        render();
+      });
+    });
+
+    document.getElementById('faqSearch').addEventListener('input', e => {
+      searchTerm = e.target.value;
+      render();
+    });
+
+    render();
+  </script>
+  <script src="../js/dashboard-fx.js"></script>
+</body>
+</html>
