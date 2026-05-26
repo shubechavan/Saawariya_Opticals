@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Find Saawariya Opticals — two convenient outlets in Bhayander West & East with addresses, phone & Google Maps.">
+  <title>Store Locator | Saawariya Opticals</title>
+  <meta name="theme-color" content="#2b3190">
+  <link rel="icon" type="image/png" href="../logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+  <div class="announcement-bar">
+    <div class="ticker">
+      <span><i class="fas fa-store"></i> Open Mon–Sun · 10 AM to 9 PM</span>
+      <span><i class="fas fa-eye"></i> Walk-in for free eye testing anytime</span>
+    </div>
+  </div>
+
+  <header class="header" id="mainHeader">
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <img src="../logo.png" alt="Saawariya Opticals Logo">
+        <div class="logo-text"><span class="name">Saawariya Opticals</span><span class="tagline">We help you look better</span></div>
+      </a>
+      <div class="search-bar">
+        <input type="text" placeholder="Search..." autocomplete="off">
+        <button type="button"><i class="fas fa-search"></i></button>
+      </div>
+      <div class="header-actions">
+        <button class="header-action-btn" onclick="window.location.href='appointment.html'"><i class="fas fa-calendar-check"></i><span>Appointment</span></button>
+        <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="main-nav-inner">
+      <div class="nav-item"><a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></div>
+      <div class="nav-item"><a href="frames.html" class="nav-link"><i class="fas fa-glasses"></i> Frames</a></div>
+      <div class="nav-item"><a href="sunglasses.html" class="nav-link"><i class="fas fa-sun"></i> Sunglasses</a></div>
+      <div class="nav-item"><a href="contact-lenses.html" class="nav-link"><i class="fas fa-circle-dot"></i> Contact Lenses</a></div>
+      <div class="nav-item"><a href="reading-frames.html" class="nav-link"><i class="fas fa-book-open-reader"></i> Reading Frames</a></div>
+      <div class="nav-item"><a href="store-locator.html" class="nav-link active"><i class="fas fa-location-dot"></i> Stores</a></div>
+      <div class="nav-item"><a href="appointment.html" class="nav-link"><i class="fas fa-calendar-check" style="color:var(--accent)"></i> Book Appointment</a></div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-panel">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;">
+        <a href="../index.html" class="logo" style="gap:10px;"><img src="../logo.png" alt="" style="height:40px;"><span style="font-family:Poppins;font-weight:700;color:var(--primary);font-size:0.95rem;">Saawariya Opticals</span></a>
+        <button onclick="toggleMobileMenu()" style="background:var(--bg);border:none;width:36px;height:36px;border-radius:8px;font-size:1.1rem;cursor:pointer;">✕</button>
+      </div>
+      <nav style="display:flex;flex-direction:column;gap:4px;">
+        <a href="../index.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">🏠 Home</a>
+        <a href="frames.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">👓 Frames</a>
+        <a href="sunglasses.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">🕶️ Sunglasses</a>
+        <a href="contact-lenses.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">🔵 Contact Lenses</a>
+        <a href="reading-frames.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">📖 Reading Frames</a>
+        <a href="store-locator.html" style="padding:12px 16px;border-radius:8px;font-weight:500;background:var(--primary-glow);color:var(--primary);">📍 Stores</a>
+        <a href="appointment.html" style="padding:12px 16px;border-radius:8px;font-weight:500;background:linear-gradient(135deg,#e8b84b,#c99a30);color:#fff;">📅 Book Appointment</a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="page-hero-blob b1"></div>
+      <div class="page-hero-blob b2"></div>
+      <div class="container">
+        <div class="page-hero-inner" data-aos="fade-up">
+          <div class="breadcrumb">
+            <a href="../index.html">Home</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Store Locator</span>
+          </div>
+          <div class="page-icon" style="background:linear-gradient(135deg, #06b6d4, #38bdf8);"><i class="fas fa-location-dot"></i></div>
+          <h1>Visit Our <span class="accent">Stores</span></h1>
+          <p><span class="pulse-dot"></span> Both outlets currently open · Walk in anytime for a free eye test or just to browse our collection.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="store-grid">
+
+          <!-- Store 1: Bhayander West -->
+          <div class="store-card" data-aos="fade-right">
+            <div class="store-map-embed">
+              <iframe
+                src="https://www.google.com/maps?q=Kamala+Park+60+Feet+Road+Bhayander+West&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen></iframe>
+            </div>
+            <div class="store-body">
+              <span class="store-tag"><i class="fas fa-store"></i> Outlet 1</span>
+              <h3 class="store-name">Saawariya Opticals — Bhayander West</h3>
+
+              <div class="store-detail">
+                <i class="fas fa-location-dot"></i>
+                <div>
+                  <strong>Address</strong><br>
+                  Shop No. 11, Kamala Park,<br>
+                  Opposite Rajasthan Hall,<br>
+                  60 Feet Road, Bhayander West,<br>
+                  Mumbai – 401101
+                </div>
+              </div>
+
+              <div class="store-detail">
+                <i class="fas fa-phone"></i>
+                <div>
+                  <strong>Phone</strong><br>
+                  <a href="tel:+919999999999">+91 99999 99999</a>
+                </div>
+              </div>
+
+              <div class="store-detail">
+                <i class="fab fa-whatsapp"></i>
+                <div>
+                  <strong>WhatsApp</strong><br>
+                  <a href="https://wa.me/919999999999" target="_blank">Chat with us</a>
+                </div>
+              </div>
+
+              <div class="store-detail">
+                <i class="fas fa-clock"></i>
+                <div>
+                  <strong>Hours</strong><br>
+                  Mon – Sun: 10:00 AM – 9:00 PM
+                </div>
+              </div>
+
+              <div class="store-actions">
+                <a href="https://maps.google.com/?q=Kamala+Park+60+Feet+Road+Bhayander+West" target="_blank" class="btn btn-primary">
+                  <i class="fas fa-diamond-turn-right"></i> Get Directions
+                </a>
+                <a href="tel:+919999999999" class="btn btn-outline">
+                  <i class="fas fa-phone"></i> Call Now
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Store 2: Bhayander East -->
+          <div class="store-card" data-aos="fade-left">
+            <div class="store-map-embed">
+              <iframe
+                src="https://www.google.com/maps?q=Janki+Heights+Bhayander+East&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen></iframe>
+            </div>
+            <div class="store-body">
+              <span class="store-tag" style="background: rgba(232,184,75,0.18); color: var(--accent-dark);"><i class="fas fa-store"></i> Outlet 2</span>
+              <h3 class="store-name">Saawariya Opticals — Bhayander East</h3>
+
+              <div class="store-detail">
+                <i class="fas fa-location-dot"></i>
+                <div>
+                  <strong>Address</strong><br>
+                  Shop No. 21, Janki Heights,<br>
+                  Near Mithalal Jain Bungalow,<br>
+                  Bhayander East,<br>
+                  Mumbai – 401105
+                </div>
+              </div>
+
+              <div class="store-detail">
+                <i class="fas fa-phone"></i>
+                <div>
+                  <strong>Phone</strong><br>
+                  <a href="tel:+919999999999">+91 99999 99999</a>
+                </div>
+              </div>
+
+              <div class="store-detail">
+                <i class="fab fa-whatsapp"></i>
+                <div>
+                  <strong>WhatsApp</strong><br>
+                  <a href="https://wa.me/919999999999" target="_blank">Chat with us</a>
+                </div>
+              </div>
+
+              <div class="store-detail">
+                <i class="fas fa-clock"></i>
+                <div>
+                  <strong>Hours</strong><br>
+                  Mon – Sun: 10:00 AM – 9:00 PM
+                </div>
+              </div>
+
+              <div class="store-actions">
+                <a href="https://maps.google.com/?q=Janki+Heights+Bhayander+East" target="_blank" class="btn btn-primary">
+                  <i class="fas fa-diamond-turn-right"></i> Get Directions
+                </a>
+                <a href="tel:+919999999999" class="btn btn-outline">
+                  <i class="fas fa-phone"></i> Call Now
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Info Banner -->
+        <div style="margin-top: 60px; padding: 50px 40px; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); border-radius: 28px; text-align:center; color:#fff;" data-aos="zoom-in">
+          <h2 style="font-family: Poppins; font-size: 1.8rem; margin-bottom: 14px;">Can't visit in person?</h2>
+          <p style="opacity: 0.9; margin-bottom: 28px; max-width: 540px; margin-left:auto; margin-right:auto;">Book an appointment online and we'll arrange a video consultation or home visit at your convenience.</p>
+          <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+            <a href="appointment.html" class="btn btn-accent"><i class="fas fa-calendar-check"></i> Book Appointment</a>
+            <a href="https://wa.me/919999999999" target="_blank" class="btn btn-white" style="background:#fff;"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container" style="text-align:center; padding: 30px 0;">
+      <p style="color: var(--text-secondary);">© 2026 Saawariya Opticals · Bhayander West &amp; East · "We help you look better"</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+  <script>
+    AOS.init({ duration: 700, once: true });
+    function toggleMobileMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+      document.getElementById('hamburger').classList.toggle('active');
+    }
+    if (window.Lenis) {
+      const lenis = new Lenis({ duration: 1.1 });
+      function raf(t){ lenis.raf(t); requestAnimationFrame(raf); }
+      requestAnimationFrame(raf);
+    }
+    const fab = document.createElement('a');
+    fab.href = 'https://wa.me/919999999999';
+    fab.target = '_blank';
+    fab.className = 'whatsapp-fab';
+    fab.innerHTML = '<i class="fab fa-whatsapp"></i>';
+    document.body.appendChild(fab);
+  </script>
+</body>
+</html>

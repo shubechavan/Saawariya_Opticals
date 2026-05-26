@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ready-made reading glasses. Just pick your reading power and frame style — fast & affordable.">
+  <title>Reading Frames | Saawariya Opticals</title>
+  <meta name="theme-color" content="#2b3190">
+  <link rel="icon" type="image/png" href="../logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+  <div class="announcement-bar">
+    <div class="ticker">
+      <span><i class="fas fa-book-open-reader"></i> Ready-made reading glasses from ₹499</span>
+      <span><i class="fas fa-tag"></i> No prescription needed — just pick your power</span>
+    </div>
+  </div>
+
+  <header class="header" id="mainHeader">
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <img src="../logo.png" alt="Saawariya Opticals Logo">
+        <div class="logo-text"><span class="name">Saawariya Opticals</span><span class="tagline">We help you look better</span></div>
+      </a>
+      <div class="search-bar">
+        <input type="text" placeholder="Search..." autocomplete="off">
+        <button type="button"><i class="fas fa-search"></i></button>
+      </div>
+      <div class="header-actions">
+        <button class="header-action-btn" onclick="window.location.href='appointment.html'"><i class="fas fa-calendar-check"></i><span>Appointment</span></button>
+        <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="main-nav-inner">
+      <div class="nav-item"><a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></div>
+      <div class="nav-item"><a href="frames.html" class="nav-link"><i class="fas fa-glasses"></i> Frames</a></div>
+      <div class="nav-item"><a href="sunglasses.html" class="nav-link"><i class="fas fa-sun"></i> Sunglasses</a></div>
+      <div class="nav-item"><a href="contact-lenses.html" class="nav-link"><i class="fas fa-circle-dot"></i> Contact Lenses</a></div>
+      <div class="nav-item"><a href="reading-frames.html" class="nav-link active"><i class="fas fa-book-open-reader"></i> Reading Frames</a></div>
+      <div class="nav-item"><a href="store-locator.html" class="nav-link"><i class="fas fa-location-dot"></i> Stores</a></div>
+      <div class="nav-item"><a href="appointment.html" class="nav-link"><i class="fas fa-calendar-check" style="color:var(--accent)"></i> Book Appointment</a></div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-panel">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;">
+        <a href="../index.html" class="logo" style="gap:10px;"><img src="../logo.png" alt="" style="height:40px;"><span style="font-family:Poppins;font-weight:700;color:var(--primary);font-size:0.95rem;">Saawariya Opticals</span></a>
+        <button onclick="toggleMobileMenu()" style="background:var(--bg);border:none;width:36px;height:36px;border-radius:8px;font-size:1.1rem;cursor:pointer;">✕</button>
+      </div>
+      <nav style="display:flex;flex-direction:column;gap:4px;">
+        <a href="../index.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">🏠 Home</a>
+        <a href="frames.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">👓 Frames</a>
+        <a href="sunglasses.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">🕶️ Sunglasses</a>
+        <a href="contact-lenses.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">🔵 Contact Lenses</a>
+        <a href="reading-frames.html" style="padding:12px 16px;border-radius:8px;font-weight:500;background:var(--primary-glow);color:var(--primary);">📖 Reading Frames</a>
+        <a href="store-locator.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">📍 Stores</a>
+        <a href="appointment.html" style="padding:12px 16px;border-radius:8px;font-weight:500;background:linear-gradient(135deg,#e8b84b,#c99a30);color:#fff;">📅 Book Appointment</a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="page-hero-blob b1"></div>
+      <div class="page-hero-blob b2"></div>
+      <div class="container">
+        <div class="page-hero-inner" data-aos="fade-up">
+          <div class="breadcrumb">
+            <a href="../index.html">Home</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Reading Frames</span>
+          </div>
+          <div class="page-icon" style="background:linear-gradient(135deg, #ec4899, #f472b6);"><i class="fas fa-book-open-reader"></i></div>
+          <h1>Ready-Made <span class="accent">Reading Glasses</span></h1>
+          <p>For seniors and anyone needing extra zoom. Just tell us your reading power, pick a frame, and we'll have them ready — no doctor visit needed.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+
+      <div class="wizard" data-aos="fade-up">
+        <!-- Step Progress -->
+        <div class="wizard-steps">
+          <div class="wizard-step active" data-step="1"><div class="step-num"><span>1</span></div><div class="step-label">Reading Power</div></div>
+          <div class="wizard-step" data-step="2"><div class="step-num"><span>2</span></div><div class="step-label">Frame Style</div></div>
+          <div class="wizard-step" data-step="3"><div class="step-num"><span>3</span></div><div class="step-label">Confirm</div></div>
+        </div>
+
+        <div class="wizard-body">
+
+          <!-- Step 1: Power -->
+          <div class="wizard-panel active" data-panel="1">
+            <h2>Select Your Reading Power</h2>
+            <p class="helper">Most users in the 40+ age range start with +1.00 to +2.00. If unsure, our staff will help you check at the store.</p>
+            <div class="option-grid" id="powerGrid">
+              <div class="option-card" data-value="+0.50"><span class="opt-icon">📖</span><div class="opt-name">+0.50</div><div class="opt-sub">Mild · early 40s</div></div>
+              <div class="option-card" data-value="+1.00"><span class="opt-icon">📖</span><div class="opt-name">+1.00</div><div class="opt-sub">Light · early 40s</div></div>
+              <div class="option-card" data-value="+1.25"><span class="opt-icon">📖</span><div class="opt-name">+1.25</div><div class="opt-sub">Common</div></div>
+              <div class="option-card" data-value="+1.50"><span class="opt-icon">📖</span><div class="opt-name">+1.50</div><div class="opt-sub">Common · mid 40s</div></div>
+              <div class="option-card" data-value="+1.75"><span class="opt-icon">📖</span><div class="opt-name">+1.75</div><div class="opt-sub">Stronger</div></div>
+              <div class="option-card" data-value="+2.00"><span class="opt-icon">📖</span><div class="opt-name">+2.00</div><div class="opt-sub">Stronger · 50s</div></div>
+              <div class="option-card" data-value="+2.25"><span class="opt-icon">📖</span><div class="opt-name">+2.25</div><div class="opt-sub">Higher</div></div>
+              <div class="option-card" data-value="+2.50"><span class="opt-icon">📖</span><div class="opt-name">+2.50</div><div class="opt-sub">Higher · 50s+</div></div>
+              <div class="option-card" data-value="+3.00"><span class="opt-icon">📖</span><div class="opt-name">+3.00</div><div class="opt-sub">High · 60s</div></div>
+              <div class="option-card" data-value="+3.50"><span class="opt-icon">📖</span><div class="opt-name">+3.50</div><div class="opt-sub">Very high</div></div>
+              <div class="option-card" data-value="+4.00"><span class="opt-icon">📖</span><div class="opt-name">+4.00</div><div class="opt-sub">Maximum</div></div>
+              <div class="option-card" data-value="Need help" style="border-style:dashed;"><span class="opt-icon">🤔</span><div class="opt-name">Not sure</div><div class="opt-sub">Visit store</div></div>
+            </div>
+          </div>
+
+          <!-- Step 2: Frame Style -->
+          <div class="wizard-panel" data-panel="2">
+            <h2>Pick a Frame Style</h2>
+            <p class="helper">Lightweight and comfortable styles for everyday reading.</p>
+            <div class="thumb-grid" id="frameGrid"></div>
+          </div>
+
+          <!-- Step 3: Confirm -->
+          <div class="wizard-panel" data-panel="3">
+            <h2>Confirm Order</h2>
+            <p class="helper">Review your reading glasses configuration.</p>
+            <div class="summary-card">
+              <div class="summary-row"><span class="label">Reading Power</span><span class="val" id="sPower">—</span></div>
+              <div class="summary-row"><span class="label">Frame Style</span><span class="val" id="sFrame">—</span></div>
+              <div class="summary-row"><span class="label">Frame Color</span><span class="val" id="sColor">—</span></div>
+              <div class="summary-row"><span class="label">Total Price</span><span class="val" id="sPrice">₹0</span></div>
+            </div>
+            <div class="form-grid">
+              <div class="form-field">
+                <label>Your Name *</label>
+                <input type="text" id="custName" required placeholder="Enter your name">
+              </div>
+              <div class="form-field">
+                <label>Mobile Number *</label>
+                <input type="tel" id="custPhone" required pattern="[0-9]{10}" placeholder="10-digit mobile">
+              </div>
+            </div>
+            <div id="successMsg" class="success-banner" style="display:none;">
+              <div class="check"><i class="fas fa-check"></i></div>
+              <h2>Order Confirmed!</h2>
+              <p>Your reading glasses will be ready in 24 hours. We'll call you when ready.</p>
+              <a href="../index.html" class="btn btn-primary"><i class="fas fa-home"></i> Back to Home</a>
+            </div>
+          </div>
+
+          <div class="wizard-actions" id="wizardActions">
+            <button class="btn btn-outline" id="prevBtn" onclick="changeStep(-1)" disabled><i class="fas fa-arrow-left"></i> Back</button>
+            <button class="btn btn-primary" id="nextBtn" onclick="changeStep(1)" disabled>Next <i class="fas fa-arrow-right"></i></button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container" style="text-align:center; padding: 30px 0;">
+      <p style="color: var(--text-secondary);">© 2026 Saawariya Opticals · "We help you look better"</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+  <script>
+    AOS.init({ duration: 700, once: true });
+    function toggleMobileMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+      document.getElementById('hamburger').classList.toggle('active');
+    }
+
+    const READING_FRAMES = [
+      { id:'r1', name:'Classic Black Rectangle', color:'Black', icon:'📖', price:499 },
+      { id:'r2', name:'Tortoise Round', color:'Tortoise', icon:'📖', price:599 },
+      { id:'r3', name:'Slim Metal Gold', color:'Gold', icon:'📖', price:699 },
+      { id:'r4', name:'Half-Rim Brown', color:'Brown', icon:'📖', price:549 },
+      { id:'r5', name:'Lightweight Blue', color:'Blue', icon:'📖', price:599 },
+      { id:'r6', name:'Floral Cat-Eye', color:'Floral', icon:'📖', price:649 },
+      { id:'r7', name:'Foldable Travel', color:'Black', icon:'📖', price:799 },
+      { id:'r8', name:'Bifocal Premium', color:'Gunmetal', icon:'📖', price:1299 }
+    ];
+
+    const state = { step: 1, power: null, frame: null, color: null, price: 0 };
+    const totalSteps = 3;
+
+    function renderFrames() {
+      document.getElementById('frameGrid').innerHTML = READING_FRAMES.map(f => `
+        <div class="option-card" data-id="${f.id}" data-value="${f.name}" data-color="${f.color}" data-price="${f.price}" style="padding: 0; overflow: hidden;">
+          <div style="aspect-ratio: 4/3; background: linear-gradient(145deg, #fce4ec, #f8bbd9); display:grid; place-items:center; font-size: 3rem;">${f.icon}</div>
+          <div style="padding: 16px;">
+            <div class="opt-name">${f.name}</div>
+            <div class="opt-sub" style="margin-top:6px;">${f.color} · ₹${f.price}</div>
+          </div>
+        </div>
+      `).join('');
+      bindFrames();
+    }
+    function bindFrames() {
+      document.querySelectorAll('#frameGrid .option-card').forEach(card => {
+        card.addEventListener('click', () => {
+          document.querySelectorAll('#frameGrid .option-card').forEach(c => c.classList.remove('selected'));
+          card.classList.add('selected');
+          state.frame = card.dataset.value;
+          state.color = card.dataset.color;
+          state.price = parseInt(card.dataset.price);
+          validate();
+        });
+      });
+    }
+
+    document.querySelectorAll('#powerGrid .option-card').forEach(card => {
+      card.addEventListener('click', () => {
+        document.querySelectorAll('#powerGrid .option-card').forEach(c => c.classList.remove('selected'));
+        card.classList.add('selected');
+        state.power = card.dataset.value;
+        validate();
+      });
+    });
+
+    function validate() {
+      const next = document.getElementById('nextBtn');
+      let ok = false;
+      if (state.step === 1) ok = !!state.power;
+      else if (state.step === 2) ok = !!state.frame;
+      else if (state.step === 3) ok = true;
+      next.disabled = !ok;
+      next.innerHTML = state.step === totalSteps ? '<i class="fas fa-check"></i> Confirm Order' : 'Next <i class="fas fa-arrow-right"></i>';
+    }
+
+    function changeStep(dir) {
+      if (state.step === totalSteps && dir === 1) return placeOrder();
+      const ns = state.step + dir;
+      if (ns < 1 || ns > totalSteps) return;
+      state.step = ns;
+      document.querySelectorAll('.wizard-panel').forEach(p => p.classList.remove('active'));
+      document.querySelector(`.wizard-panel[data-panel="${ns}"]`).classList.add('active');
+      document.querySelectorAll('.wizard-step').forEach(s => {
+        const n = parseInt(s.dataset.step);
+        s.classList.toggle('active', n === ns);
+        s.classList.toggle('done', n < ns);
+      });
+      document.getElementById('prevBtn').disabled = ns === 1;
+      if (ns === 2 && !document.getElementById('frameGrid').children.length) renderFrames();
+      if (ns === totalSteps) {
+        document.getElementById('sPower').textContent = state.power;
+        document.getElementById('sFrame').textContent = state.frame;
+        document.getElementById('sColor').textContent = state.color;
+        document.getElementById('sPrice').textContent = '₹' + state.price.toLocaleString();
+      }
+      validate();
+      window.scrollTo({ top: document.querySelector('.wizard').offsetTop - 60, behavior: 'smooth' });
+    }
+
+    function placeOrder() {
+      const name = document.getElementById('custName').value;
+      const phone = document.getElementById('custPhone').value;
+      if (!name || !phone) { alert('Please enter your name and mobile number.'); return; }
+      const msg = encodeURIComponent(
+        `Hi Saawariya Opticals! Reading Glasses Order:\n\n` +
+        `👤 ${name}\n📞 ${phone}\n\n` +
+        `📖 Power: ${state.power}\n👓 Frame: ${state.frame}\n🎨 Color: ${state.color}\n` +
+        `💰 Price: ₹${state.price}\n\nPlease confirm.`
+      );
+      document.getElementById('successMsg').style.display = 'block';
+      document.querySelector('.summary-card').style.display = 'none';
+      document.querySelector('#wizardActions').style.display = 'none';
+      document.querySelectorAll('.form-grid').forEach(f => f.style.display = 'none');
+      setTimeout(() => window.open(`https://wa.me/919999999999?text=${msg}`, '_blank'), 800);
+    }
+
+    if (window.Lenis) {
+      const lenis = new Lenis({ duration: 1.1 });
+      function raf(t){ lenis.raf(t); requestAnimationFrame(raf); }
+      requestAnimationFrame(raf);
+    }
+    const fab = document.createElement('a');
+    fab.href = 'https://wa.me/919999999999';
+    fab.target = '_blank';
+    fab.className = 'whatsapp-fab';
+    fab.innerHTML = '<i class="fab fa-whatsapp"></i>';
+    document.body.appendChild(fab);
+  </script>
+</body>
+</html>

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book a free eye test or consultation at Saawariya Opticals — Bhayander West or East. Quick & easy online booking.">
+  <title>Book Appointment | Saawariya Opticals</title>
+  <meta name="theme-color" content="#2b3190">
+  <link rel="icon" type="image/png" href="../logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <!-- Flatpickr -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_blue.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <style>
+    .flatpickr-day.selected,
+    .flatpickr-day.selected:hover { background: #2b3190; border-color: #2b3190; }
+    .time-slots {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+      gap: 10px;
+      margin-top: 6px;
+    }
+    .time-slot {
+      padding: 10px 8px;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      color: var(--text-secondary);
+      transition: all 0.2s;
+      background: #fff;
+    }
+    .time-slot:hover { border-color: var(--primary); color: var(--primary); }
+    .time-slot.selected {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: #fff;
+      border-color: var(--primary);
+    }
+    .service-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .service-pick {
+      padding: 18px 14px;
+      border: 2px solid var(--border);
+      border-radius: 14px;
+      text-align: center;
+      cursor: pointer;
+      background: #fff;
+      transition: all 0.25s;
+    }
+    .service-pick:hover { border-color: var(--primary-light); transform: translateY(-2px); }
+    .service-pick.selected {
+      border-color: var(--primary);
+      background: linear-gradient(135deg, rgba(43,49,144,0.05), rgba(232,184,75,0.06));
+    }
+    .service-pick i {
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 10px;
+      display: block;
+    }
+    .service-pick .label {
+      font-family: 'Poppins';
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--text-primary);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="announcement-bar">
+    <div class="ticker">
+      <span><i class="fas fa-eye"></i> FREE eye testing for all customers</span>
+      <span><i class="fas fa-clock"></i> Appointments confirmed within 30 minutes</span>
+    </div>
+  </div>
+
+  <header class="header" id="mainHeader">
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <img src="../logo.png" alt="Saawariya Opticals Logo">
+        <div class="logo-text"><span class="name">Saawariya Opticals</span><span class="tagline">We help you look better</span></div>
+      </a>
+      <div class="search-bar">
+        <input type="text" placeholder="Search..." autocomplete="off">
+        <button type="button"><i class="fas fa-search"></i></button>
+      </div>
+      <div class="header-actions">
+        <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="main-nav-inner">
+      <div class="nav-item"><a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></div>
+      <div class="nav-item"><a href="frames.html" class="nav-link"><i class="fas fa-glasses"></i> Frames</a></div>
+      <div class="nav-item"><a href="sunglasses.html" class="nav-link"><i class="fas fa-sun"></i> Sunglasses</a></div>
+      <div class="nav-item"><a href="contact-lenses.html" class="nav-link"><i class="fas fa-circle-dot"></i> Contact Lenses</a></div>
+      <div class="nav-item"><a href="reading-frames.html" class="nav-link"><i class="fas fa-book-open-reader"></i> Reading Frames</a></div>
+      <div class="nav-item"><a href="store-locator.html" class="nav-link"><i class="fas fa-location-dot"></i> Stores</a></div>
+      <div class="nav-item"><a href="appointment.html" class="nav-link active"><i class="fas fa-calendar-check" style="color:var(--accent)"></i> Book Appointment</a></div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-panel">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;">
+        <a href="../index.html" class="logo" style="gap:10px;"><img src="../logo.png" alt="" style="height:40px;"><span style="font-family:Poppins;font-weight:700;color:var(--primary);font-size:0.95rem;">Saawariya Opticals</span></a>
+        <button onclick="toggleMobileMenu()" style="background:var(--bg);border:none;width:36px;height:36px;border-radius:8px;font-size:1.1rem;cursor:pointer;">✕</button>
+      </div>
+      <nav style="display:flex;flex-direction:column;gap:4px;">
+        <a href="../index.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">🏠 Home</a>
+        <a href="frames.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">👓 Frames</a>
+        <a href="sunglasses.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">🕶️ Sunglasses</a>
+        <a href="contact-lenses.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">🔵 Contact Lenses</a>
+        <a href="reading-frames.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">📖 Reading Frames</a>
+        <a href="store-locator.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">📍 Stores</a>
+        <a href="appointment.html" style="padding:12px 16px;border-radius:8px;font-weight:500;background:linear-gradient(135deg,#e8b84b,#c99a30);color:#fff;">📅 Book Appointment</a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="page-hero-blob b1"></div>
+      <div class="page-hero-blob b2"></div>
+      <div class="container">
+        <div class="page-hero-inner" data-aos="fade-up">
+          <div class="breadcrumb">
+            <a href="../index.html">Home</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Book Appointment</span>
+          </div>
+          <div class="page-icon" style="background:linear-gradient(135deg, #8b5cf6, #a78bfa);"><i class="fas fa-calendar-check"></i></div>
+          <h1>Book Your <span class="accent">Appointment</span></h1>
+          <p>Schedule a free eye test, frame consultation, or contact lens fitting. Pick your preferred store, date & time — we'll handle the rest.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="wizard" style="max-width: 880px;">
+          <div class="wizard-body">
+
+            <form id="apptForm" onsubmit="bookAppt(event)">
+
+              <!-- Service Type -->
+              <h3 style="font-family: Poppins; margin-bottom: 12px; color: var(--text-primary);">1. Select Service</h3>
+              <div class="service-cards" id="serviceCards">
+                <div class="service-pick selected" data-service="Free Eye Test">
+                  <i class="fas fa-eye"></i>
+                  <div class="label">Free Eye Test</div>
+                </div>
+                <div class="service-pick" data-service="Frame Consultation">
+                  <i class="fas fa-glasses"></i>
+                  <div class="label">Frame Consultation</div>
+                </div>
+                <div class="service-pick" data-service="Contact Lens Fitting">
+                  <i class="fas fa-circle-dot"></i>
+                  <div class="label">Contact Lens Fitting</div>
+                </div>
+                <div class="service-pick" data-service="Reading Glasses">
+                  <i class="fas fa-book-open-reader"></i>
+                  <div class="label">Reading Glasses</div>
+                </div>
+                <div class="service-pick" data-service="Children's Eye Test">
+                  <i class="fas fa-child"></i>
+                  <div class="label">Children's Eye Test</div>
+                </div>
+                <div class="service-pick" data-service="Other">
+                  <i class="fas fa-circle-question"></i>
+                  <div class="label">Other</div>
+                </div>
+              </div>
+
+              <!-- Store Selection -->
+              <h3 style="font-family: Poppins; margin: 28px 0 12px;">2. Choose Store</h3>
+              <div class="service-cards">
+                <div class="service-pick selected" data-store="Bhayander West">
+                  <i class="fas fa-store"></i>
+                  <div class="label">Bhayander West</div>
+                  <div style="font-size:0.75rem; color:var(--text-muted); margin-top:6px;">Kamala Park, 60 Feet Rd</div>
+                </div>
+                <div class="service-pick" data-store="Bhayander East">
+                  <i class="fas fa-store"></i>
+                  <div class="label">Bhayander East</div>
+                  <div style="font-size:0.75rem; color:var(--text-muted); margin-top:6px;">Janki Heights</div>
+                </div>
+              </div>
+
+              <!-- Date & Time -->
+              <h3 style="font-family: Poppins; margin: 28px 0 12px;">3. Pick Date &amp; Time</h3>
+              <div class="form-grid">
+                <div class="form-field">
+                  <label>Preferred Date *</label>
+                  <input type="text" id="apptDate" required placeholder="Tap to select date">
+                </div>
+                <div class="form-field">
+                  <label>Time Slot *</label>
+                  <div class="time-slots" id="timeSlots">
+                    <div class="time-slot" data-time="10:00 AM">10:00 AM</div>
+                    <div class="time-slot" data-time="11:00 AM">11:00 AM</div>
+                    <div class="time-slot" data-time="12:00 PM">12:00 PM</div>
+                    <div class="time-slot" data-time="1:00 PM">1:00 PM</div>
+                    <div class="time-slot" data-time="4:00 PM">4:00 PM</div>
+                    <div class="time-slot" data-time="5:00 PM">5:00 PM</div>
+                    <div class="time-slot" data-time="6:00 PM">6:00 PM</div>
+                    <div class="time-slot" data-time="7:00 PM">7:00 PM</div>
+                    <div class="time-slot" data-time="8:00 PM">8:00 PM</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Personal Details -->
+              <h3 style="font-family: Poppins; margin: 28px 0 12px;">4. Your Details</h3>
+              <div class="form-grid">
+                <div class="form-field">
+                  <label>Full Name *</label>
+                  <input type="text" id="apptName" required placeholder="Enter your full name">
+                </div>
+                <div class="form-field">
+                  <label>Mobile Number *</label>
+                  <input type="tel" id="apptPhone" required pattern="[0-9]{10}" placeholder="10-digit mobile">
+                </div>
+                <div class="form-field">
+                  <label>Email (optional)</label>
+                  <input type="email" id="apptEmail" placeholder="your@email.com">
+                </div>
+                <div class="form-field">
+                  <label>Age (optional)</label>
+                  <input type="number" id="apptAge" min="1" max="120" placeholder="Your age">
+                </div>
+                <div class="form-field full">
+                  <label>Notes / Special Requirements (optional)</label>
+                  <textarea id="apptNotes" placeholder="e.g. wearing glasses since 2018, need progressive lenses, etc."></textarea>
+                </div>
+              </div>
+
+              <div style="margin-top: 32px; display:flex; gap:12px; flex-wrap:wrap;">
+                <button type="submit" class="btn btn-primary" style="flex:1; min-width: 220px; justify-content:center;">
+                  <i class="fas fa-calendar-check"></i> Confirm Appointment
+                </button>
+                <a id="apptWhatsapp" href="#" target="_blank" class="btn btn-outline" style="flex:1; min-width: 220px; justify-content:center; border-color:#25d366; color:#25d366;">
+                  <i class="fab fa-whatsapp"></i> Book via WhatsApp
+                </a>
+              </div>
+
+              <p style="margin-top: 20px; font-size: 0.82rem; color: var(--text-muted); text-align:center;">
+                <i class="fas fa-shield-halved"></i> Your information is safe. We'll only use it to confirm your appointment.
+              </p>
+            </form>
+
+            <div id="apptSuccess" class="success-banner" style="display:none;">
+              <div class="check"><i class="fas fa-check"></i></div>
+              <h2>Appointment Booked!</h2>
+              <p id="apptSummary"></p>
+              <p style="font-weight:600; color: var(--primary);">We'll call you shortly to confirm.</p>
+              <a href="../index.html" class="btn btn-primary" style="margin-top: 12px;"><i class="fas fa-home"></i> Back to Home</a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Trust signals -->
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 50px auto; max-width: 880px;">
+          <div style="text-align:center; padding: 24px 18px; background: #fff; border-radius: 16px; border: 1px solid var(--border-light);">
+            <i class="fas fa-eye" style="font-size: 2rem; color: var(--primary); margin-bottom: 10px;"></i>
+            <h4 style="font-family: Poppins;">100% Free</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">Eye testing is always free at our outlets.</p>
+          </div>
+          <div style="text-align:center; padding: 24px 18px; background: #fff; border-radius: 16px; border: 1px solid var(--border-light);">
+            <i class="fas fa-microscope" style="font-size: 2rem; color: var(--primary); margin-bottom: 10px;"></i>
+            <h4 style="font-family: Poppins;">Advanced Tech</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">Modern equipment for precise results.</p>
+          </div>
+          <div style="text-align:center; padding: 24px 18px; background: #fff; border-radius: 16px; border: 1px solid var(--border-light);">
+            <i class="fas fa-user-doctor" style="font-size: 2rem; color: var(--primary); margin-bottom: 10px;"></i>
+            <h4 style="font-family: Poppins;">Expert Optometrists</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">15+ years of trusted experience.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container" style="text-align:center; padding: 30px 0;">
+      <p style="color: var(--text-secondary);">© 2026 Saawariya Opticals · "We help you look better"</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+  <script>
+    AOS.init({ duration: 700, once: true });
+    function toggleMobileMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+      document.getElementById('hamburger').classList.toggle('active');
+    }
+
+    // Pre-select service from URL ?service=xxx
+    const urlParams = new URLSearchParams(location.search);
+    const preService = urlParams.get('service');
+    if (preService === 'eye-test') {
+      // already default selected
+    }
+
+    /* Flatpickr — date picker */
+    flatpickr('#apptDate', {
+      minDate: 'today',
+      maxDate: new Date().fp_incr(60), // 60 days from today
+      dateFormat: 'Y-m-d',
+      altInput: true,
+      altFormat: 'l, F j, Y',
+      disable: [], // no disabled dates
+    });
+
+    /* Service & store selection */
+    function bindPick(selector, key) {
+      document.querySelectorAll(selector).forEach(el => {
+        el.addEventListener('click', () => {
+          el.parentNode.querySelectorAll('.service-pick').forEach(s => s.classList.remove('selected'));
+          el.classList.add('selected');
+        });
+      });
+    }
+    bindPick('.service-pick');
+
+    /* Time slot selection */
+    document.querySelectorAll('.time-slot').forEach(slot => {
+      slot.addEventListener('click', () => {
+        document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
+        slot.classList.add('selected');
+      });
+    });
+
+    function getFormData() {
+      const service = document.querySelector('#serviceCards .service-pick.selected')?.dataset.service || 'Eye Test';
+      const store = document.querySelector('.service-pick.selected[data-store]')?.dataset.store || 'Bhayander West';
+      const date = document.getElementById('apptDate').value;
+      const time = document.querySelector('.time-slot.selected')?.dataset.time;
+      const name = document.getElementById('apptName').value;
+      const phone = document.getElementById('apptPhone').value;
+      const email = document.getElementById('apptEmail').value;
+      const age = document.getElementById('apptAge').value;
+      const notes = document.getElementById('apptNotes').value;
+      return { service, store, date, time, name, phone, email, age, notes };
+    }
+
+    function bookAppt(e) {
+      e.preventDefault();
+      const f = getFormData();
+      if (!f.time) { alert('Please select a time slot.'); return; }
+      const msg = encodeURIComponent(
+        `Hi Saawariya Opticals! New Appointment Request:\n\n` +
+        `👤 Name: ${f.name}\n📞 Phone: ${f.phone}\n` +
+        (f.email ? `📧 Email: ${f.email}\n` : '') +
+        (f.age ? `🎂 Age: ${f.age}\n` : '') +
+        `\n🛍️ Service: ${f.service}\n📍 Store: ${f.store}\n` +
+        `📅 Date: ${f.date}\n⏰ Time: ${f.time}\n` +
+        (f.notes ? `\n📝 Notes: ${f.notes}` : '')
+      );
+      // Show success
+      document.getElementById('apptForm').style.display = 'none';
+      const succ = document.getElementById('apptSuccess');
+      succ.style.display = 'block';
+      document.getElementById('apptSummary').textContent =
+        `${f.service} at our ${f.store} outlet on ${f.date} at ${f.time}.`;
+      // Open WhatsApp
+      setTimeout(() => window.open(`https://wa.me/919999999999?text=${msg}`, '_blank'), 800);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // WhatsApp shortcut
+    document.getElementById('apptWhatsapp').addEventListener('click', e => {
+      const f = getFormData();
+      const msg = encodeURIComponent(
+        `Hi Saawariya Opticals, I'd like to book a ${f.service}` +
+        (f.date ? ` on ${f.date}` : '') +
+        (f.time ? ` at ${f.time}` : '') +
+        ` at your ${f.store} outlet.\n\nName: ${f.name || '[your name]'}\nPhone: ${f.phone || ''}`
+      );
+      e.currentTarget.href = `https://wa.me/919999999999?text=${msg}`;
+    });
+
+    if (window.Lenis) {
+      const lenis = new Lenis({ duration: 1.1 });
+      function raf(t){ lenis.raf(t); requestAnimationFrame(raf); }
+      requestAnimationFrame(raf);
+    }
+    const fab = document.createElement('a');
+    fab.href = 'https://wa.me/919999999999';
+    fab.target = '_blank';
+    fab.className = 'whatsapp-fab';
+    fab.innerHTML = '<i class="fab fa-whatsapp"></i>';
+    document.body.appendChild(fab);
+  </script>
+</body>
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse prescription frames at Saawariya Opticals. Book a free eye test or upload your prescription to get the perfect pair.">
+  <title>Frames | Saawariya Opticals</title>
+  <meta name="theme-color" content="#2b3190">
+
+  <link rel="icon" type="image/png" href="../logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+  <!-- ── Announcement Bar ── -->
+  <div class="announcement-bar">
+    <div class="ticker">
+      <span><i class="fas fa-truck-fast"></i> Free delivery on orders above ₹999</span>
+      <span><i class="fas fa-eye"></i> Free eye testing at both outlets</span>
+      <span><i class="fas fa-tag"></i> Up to 40% off on designer frames</span>
+    </div>
+  </div>
+
+  <!-- ── Header (same as homepage) ── -->
+  <header class="header" id="mainHeader">
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <img src="../logo.png" alt="Saawariya Opticals Logo">
+        <div class="logo-text">
+          <span class="name">Saawariya Opticals</span>
+          <span class="tagline">We help you look better</span>
+        </div>
+      </a>
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search frames, brands..." autocomplete="off">
+        <button type="button"><i class="fas fa-search"></i></button>
+      </div>
+      <div class="header-actions">
+        <button class="header-action-btn" onclick="window.location.href='appointment.html'">
+          <i class="fas fa-calendar-check"></i><span>Appointment</span>
+        </button>
+        <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Nav ── -->
+  <nav class="main-nav">
+    <div class="main-nav-inner">
+      <div class="nav-item"><a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></div>
+      <div class="nav-item"><a href="frames.html" class="nav-link active"><i class="fas fa-glasses"></i> Frames</a></div>
+      <div class="nav-item"><a href="sunglasses.html" class="nav-link"><i class="fas fa-sun"></i> Sunglasses</a></div>
+      <div class="nav-item"><a href="contact-lenses.html" class="nav-link"><i class="fas fa-circle-dot"></i> Contact Lenses</a></div>
+      <div class="nav-item"><a href="reading-frames.html" class="nav-link"><i class="fas fa-book-open-reader"></i> Reading Frames</a></div>
+      <div class="nav-item"><a href="store-locator.html" class="nav-link"><i class="fas fa-location-dot"></i> Stores</a></div>
+      <div class="nav-item"><a href="appointment.html" class="nav-link"><i class="fas fa-calendar-check" style="color:var(--accent)"></i> Book Appointment</a></div>
+    </div>
+  </nav>
+
+  <!-- ── Mobile Menu ── -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-panel">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;">
+        <a href="../index.html" class="logo" style="gap:10px;">
+          <img src="../logo.png" alt="" style="height:40px;">
+          <span style="font-family:Poppins;font-weight:700;color:var(--primary);font-size:0.95rem;">Saawariya Opticals</span>
+        </a>
+        <button onclick="toggleMobileMenu()" style="background:var(--bg);border:none;width:36px;height:36px;border-radius:8px;font-size:1.1rem;cursor:pointer;">✕</button>
+      </div>
+      <nav style="display:flex;flex-direction:column;gap:4px;">
+        <a href="../index.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">🏠 Home</a>
+        <a href="frames.html" style="padding:12px 16px;border-radius:8px;font-weight:500;background:var(--primary-glow);color:var(--primary);">👓 Frames</a>
+        <a href="sunglasses.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">🕶️ Sunglasses</a>
+        <a href="contact-lenses.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">🔵 Contact Lenses</a>
+        <a href="reading-frames.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">📖 Reading Frames</a>
+        <a href="store-locator.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">📍 Stores</a>
+        <a href="appointment.html" style="padding:12px 16px;border-radius:8px;font-weight:500;background:linear-gradient(135deg,#e8b84b,#c99a30);color:#fff;">📅 Book Appointment</a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ── Page Hero ── -->
+    <section class="page-hero">
+      <div class="page-hero-blob b1"></div>
+      <div class="page-hero-blob b2"></div>
+      <div class="container">
+        <div class="page-hero-inner" data-aos="fade-up">
+          <div class="breadcrumb">
+            <a href="../index.html">Home</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Frames</span>
+          </div>
+          <div class="page-icon"><i class="fas fa-glasses"></i></div>
+          <h1>Prescription <span class="accent">Frames</span></h1>
+          <p>Discover hundreds of frames in every shape and style. Book a free eye test at our store, or upload your prescription — we'll handle the rest.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Dual CTA: Book Test OR Upload Rx ── -->
+    <div class="cta-dual">
+      <a href="appointment.html?service=eye-test" class="cta-dual-card accent" data-aos="fade-right">
+        <div class="cta-dual-icon"><i class="fas fa-eye"></i></div>
+        <div class="cta-dual-body">
+          <h3>Book Free Eye Test</h3>
+          <p>Visit our outlet for a professional eye check-up and get your perfect prescription.</p>
+        </div>
+        <div class="cta-dual-arrow"><i class="fas fa-arrow-right"></i></div>
+      </a>
+      <a href="#uploadRx" class="cta-dual-card" data-aos="fade-left">
+        <div class="cta-dual-icon"><i class="fas fa-file-medical"></i></div>
+        <div class="cta-dual-body">
+          <h3>Upload Prescription</h3>
+          <p>Already tested elsewhere? Upload your doctor's prescription and we'll match the right lenses.</p>
+        </div>
+        <div class="cta-dual-arrow"><i class="fas fa-arrow-right"></i></div>
+      </a>
+    </div>
+
+    <!-- ── Frame Types Filter ── -->
+    <section class="section" style="padding-top: 16px;">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up" style="margin-bottom: 24px;">
+          <span class="section-label">Shop by Style</span>
+          <h2 class="section-title">Find Your <span>Perfect Frame</span></h2>
+        </div>
+
+        <!-- Tabs: Frame Types -->
+        <div class="tab-bar" id="frameTypeTabs">
+          <button class="tab-btn active" data-type="all">All</button>
+          <button class="tab-btn" data-type="rectangle">Rectangle</button>
+          <button class="tab-btn" data-type="round">Round</button>
+          <button class="tab-btn" data-type="oval">Oval</button>
+          <button class="tab-btn" data-type="cat-eye">Cat Eye</button>
+          <button class="tab-btn" data-type="aviator">Aviator</button>
+          <button class="tab-btn" data-type="square">Square</button>
+        </div>
+
+        <!-- Brand Chips -->
+        <div class="brand-strip" id="frameBrands">
+          <span class="brand-chip active" data-brand="all">All Brands</span>
+          <span class="brand-chip" data-brand="ray-ban">Ray-Ban</span>
+          <span class="brand-chip" data-brand="titan">Titan</span>
+          <span class="brand-chip" data-brand="vogue">Vogue</span>
+          <span class="brand-chip" data-brand="fastrack">Fastrack</span>
+          <span class="brand-chip" data-brand="lenskart">Lenskart</span>
+          <span class="brand-chip" data-brand="vincent-chase">Vincent Chase</span>
+          <span class="brand-chip" data-brand="carrera">Carrera</span>
+          <span class="brand-chip" data-brand="gucci">Gucci</span>
+        </div>
+
+        <!-- Frames Grid -->
+        <div class="thumb-grid" id="framesGrid"></div>
+
+        <div style="text-align:center;margin-top:40px;">
+          <a href="appointment.html" class="btn btn-primary">
+            <i class="fas fa-calendar-check"></i> Visit Store to See All Frames
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Upload Prescription Section ── -->
+    <section class="section bg-light" id="uploadRx">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-label">Got A Prescription?</span>
+          <h2 class="section-title">Upload Your <span>Doctor's Rx</span></h2>
+          <p class="section-subtitle">Send us a clear photo of your prescription and we'll prepare the right lenses for your chosen frame.</p>
+        </div>
+
+        <div class="wizard" style="max-width: 760px;">
+          <div class="wizard-body">
+            <form id="rxForm" onsubmit="submitRx(event)">
+              <div class="form-grid">
+                <div class="form-field">
+                  <label>Full Name *</label>
+                  <input type="text" id="rxName" required placeholder="Enter your name">
+                </div>
+                <div class="form-field">
+                  <label>Mobile Number *</label>
+                  <input type="tel" id="rxPhone" required pattern="[0-9]{10}" placeholder="10-digit mobile">
+                </div>
+                <div class="form-field full">
+                  <label>Frame Choice (optional)</label>
+                  <input type="text" id="rxFrame" placeholder="e.g. Ray-Ban Aviator, or 'Need help choosing'">
+                </div>
+                <div class="form-field full">
+                  <label>Upload Prescription *</label>
+                  <label class="dropzone" id="dropzone">
+                    <input type="file" id="rxFile" accept="image/*,application/pdf" required>
+                    <i class="fas fa-cloud-arrow-up"></i>
+                    <h4>Click to upload or drag &amp; drop</h4>
+                    <p>JPG, PNG, or PDF · Max 5 MB</p>
+                    <div id="rxPreview"></div>
+                  </label>
+                </div>
+                <div class="form-field full">
+                  <label>Additional Notes</label>
+                  <textarea id="rxNotes" placeholder="Special requirements, allergies, etc."></textarea>
+                </div>
+              </div>
+              <div style="margin-top: 28px; display:flex; gap:12px; flex-wrap:wrap;">
+                <button type="submit" class="btn btn-primary" style="flex:1; min-width: 200px; justify-content:center;">
+                  <i class="fas fa-paper-plane"></i> Submit Prescription
+                </button>
+                <a id="rxWhatsapp" href="#" target="_blank" class="btn btn-outline" style="flex:1; min-width: 200px; justify-content:center; border-color:#25d366; color:#25d366;">
+                  <i class="fab fa-whatsapp"></i> Send via WhatsApp
+                </a>
+              </div>
+            </form>
+            <div id="rxSuccess" class="success-banner" style="display:none;">
+              <div class="check"><i class="fas fa-check"></i></div>
+              <h2>Prescription Received!</h2>
+              <p>Our team will call you within 2 hours to confirm details and prepare your lenses.</p>
+              <a href="../index.html" class="btn btn-primary"><i class="fas fa-home"></i> Back to Home</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <div class="container" style="text-align:center; padding: 30px 0;">
+      <p style="color: var(--text-secondary);">© 2026 Saawariya Opticals · Bhayander West &amp; East · "We help you look better"</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt/dist/vanilla-tilt.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+
+  <script>
+    AOS.init({ duration: 700, once: true });
+
+    /* Mobile menu */
+    function toggleMobileMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+      document.getElementById('hamburger').classList.toggle('active');
+    }
+
+    /* Demo frames data */
+    const FRAMES = [
+      { id:1, name:'Classic Wayfarer', brand:'ray-ban', type:'rectangle', price:2999, mrp:3999, icon:'👓' },
+      { id:2, name:'Aviator Pro Gold', brand:'ray-ban', type:'aviator', price:3499, mrp:4999, icon:'🕶️' },
+      { id:3, name:'Round Steel', brand:'titan', type:'round', price:1499, mrp:2199, icon:'👓', badge:'NEW', badgeClass:'new' },
+      { id:4, name:'Cat Eye Allure', brand:'vogue', type:'cat-eye', price:2199, mrp:3299, icon:'👓' },
+      { id:5, name:'Oval Glide', brand:'fastrack', type:'oval', price:1199, mrp:1799, icon:'👓' },
+      { id:6, name:'Square Bold', brand:'carrera', type:'square', price:4999, mrp:6999, icon:'🕶️', badge:'TRENDING', badgeClass:'trending' },
+      { id:7, name:'Vintage Round', brand:'vincent-chase', type:'round', price:1799, mrp:2499, icon:'👓' },
+      { id:8, name:'Modern Rectangle', brand:'lenskart', type:'rectangle', price:1299, mrp:1999, icon:'👓' },
+      { id:9, name:'Luxury Cat Eye', brand:'gucci', type:'cat-eye', price:8999, mrp:11999, icon:'👓', badge:'LUXURY' },
+      { id:10, name:'Sport Aviator', brand:'ray-ban', type:'aviator', price:3299, mrp:4499, icon:'🕶️' },
+      { id:11, name:'Slim Rectangle', brand:'titan', type:'rectangle', price:1599, mrp:2199, icon:'👓' },
+      { id:12, name:'Designer Oval', brand:'vogue', type:'oval', price:2599, mrp:3499, icon:'👓', badge:'NEW', badgeClass:'new' }
+    ];
+
+    let activeType = 'all', activeBrand = 'all';
+
+    function renderFrames() {
+      const grid = document.getElementById('framesGrid');
+      const filtered = FRAMES.filter(f =>
+        (activeType === 'all' || f.type === activeType) &&
+        (activeBrand === 'all' || f.brand === activeBrand)
+      );
+      if (!filtered.length) {
+        grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text-muted);"><i class="fas fa-search" style="font-size:2rem; margin-bottom:12px;"></i><p>No frames in this combination — try another filter or visit our store.</p></div>';
+        return;
+      }
+      grid.innerHTML = filtered.map(f => `
+        <div class="thumb-card" data-aos="zoom-in" onclick="enquireFrame('${f.name}')">
+          ${f.badge ? `<span class="thumb-badge ${f.badgeClass||''}">${f.badge}</span>` : ''}
+          <div class="thumb-image">${f.icon}</div>
+          <div class="thumb-body">
+            <div class="thumb-brand">${f.brand.replace('-',' ')}</div>
+            <div class="thumb-name">${f.name}</div>
+            <div class="thumb-price">
+              <span class="now">₹${f.price.toLocaleString()}</span>
+              <span class="was">₹${f.mrp.toLocaleString()}</span>
+              <span class="off">${Math.round((1-f.price/f.mrp)*100)}% off</span>
+            </div>
+          </div>
+        </div>
+      `).join('');
+      AOS.refresh();
+    }
+
+    function enquireFrame(name) {
+      const msg = encodeURIComponent(`Hi Saawariya Opticals, I'm interested in the frame: "${name}". Please share more details.`);
+      window.open(`https://wa.me/919999999999?text=${msg}`, '_blank');
+    }
+
+    document.querySelectorAll('#frameTypeTabs .tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('#frameTypeTabs .tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeType = btn.dataset.type;
+        renderFrames();
+      });
+    });
+    document.querySelectorAll('#frameBrands .brand-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        document.querySelectorAll('#frameBrands .brand-chip').forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        activeBrand = chip.dataset.brand;
+        renderFrames();
+      });
+    });
+
+    renderFrames();
+
+    /* ── Rx Upload form ── */
+    const dz = document.getElementById('dropzone');
+    const file = document.getElementById('rxFile');
+    const preview = document.getElementById('rxPreview');
+
+    ['dragover'].forEach(e => dz.addEventListener(e, ev => { ev.preventDefault(); dz.classList.add('dragging'); }));
+    ['dragleave','drop'].forEach(e => dz.addEventListener(e, ev => { ev.preventDefault(); dz.classList.remove('dragging'); }));
+    dz.addEventListener('drop', ev => {
+      if (ev.dataTransfer.files.length) {
+        file.files = ev.dataTransfer.files;
+        showPreview(file.files[0]);
+      }
+    });
+    file.addEventListener('change', () => file.files[0] && showPreview(file.files[0]));
+    function showPreview(f) {
+      preview.innerHTML = '';
+      if (f.type.startsWith('image/')) {
+        const img = document.createElement('img');
+        img.src = URL.createObjectURL(f);
+        img.className = 'preview';
+        preview.appendChild(img);
+      } else {
+        preview.innerHTML = `<p style="margin-top:12px; color:var(--primary); font-weight:600;"><i class="fas fa-file-pdf"></i> ${f.name}</p>`;
+      }
+    }
+
+    function submitRx(e) {
+      e.preventDefault();
+      document.getElementById('rxForm').style.display = 'none';
+      document.getElementById('rxSuccess').style.display = 'block';
+      window.scrollTo({ top: document.getElementById('uploadRx').offsetTop - 60, behavior: 'smooth' });
+    }
+
+    /* WhatsApp link from form */
+    document.getElementById('rxWhatsapp').addEventListener('click', e => {
+      const name = document.getElementById('rxName').value || '[Name]';
+      const phone = document.getElementById('rxPhone').value || '';
+      const frame = document.getElementById('rxFrame').value || 'Need help choosing';
+      const msg = encodeURIComponent(`Hi Saawariya Opticals!\nName: ${name}\nPhone: ${phone}\nFrame: ${frame}\n\nI'm sending my prescription. Please assist.`);
+      e.currentTarget.href = `https://wa.me/919999999999?text=${msg}`;
+    });
+
+    /* Lenis */
+    if (window.Lenis) {
+      const lenis = new Lenis({ duration: 1.1 });
+      function raf(t){ lenis.raf(t); requestAnimationFrame(raf); }
+      requestAnimationFrame(raf);
+    }
+
+    /* WhatsApp FAB */
+    const fab = document.createElement('a');
+    fab.href = 'https://wa.me/919999999999';
+    fab.target = '_blank';
+    fab.className = 'whatsapp-fab';
+    fab.innerHTML = '<i class="fab fa-whatsapp"></i>';
+    document.body.appendChild(fab);
+  </script>
+</body>
+</html>

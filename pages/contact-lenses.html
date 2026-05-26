@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Configure contact lenses by brand, color, power & duration. Polylite, Freshlook, Bausch & Lomb, Acme, Copper Vision.">
+  <title>Contact Lenses Configurator | Saawariya Opticals</title>
+  <meta name="theme-color" content="#2b3190">
+  <link rel="icon" type="image/png" href="../logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+  <div class="announcement-bar">
+    <div class="ticker">
+      <span><i class="fas fa-circle-dot"></i> Genuine branded lenses · Polylite, Freshlook, Bausch &amp; Lomb, Acme, Copper Vision</span>
+      <span><i class="fas fa-shield-halved"></i> 100% authentic guarantee</span>
+    </div>
+  </div>
+
+  <header class="header" id="mainHeader">
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <img src="../logo.png" alt="Saawariya Opticals Logo">
+        <div class="logo-text"><span class="name">Saawariya Opticals</span><span class="tagline">We help you look better</span></div>
+      </a>
+      <div class="search-bar">
+        <input type="text" placeholder="Search..." autocomplete="off">
+        <button type="button"><i class="fas fa-search"></i></button>
+      </div>
+      <div class="header-actions">
+        <button class="header-action-btn" onclick="window.location.href='appointment.html'"><i class="fas fa-calendar-check"></i><span>Appointment</span></button>
+        <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="main-nav-inner">
+      <div class="nav-item"><a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></div>
+      <div class="nav-item"><a href="frames.html" class="nav-link"><i class="fas fa-glasses"></i> Frames</a></div>
+      <div class="nav-item"><a href="sunglasses.html" class="nav-link"><i class="fas fa-sun"></i> Sunglasses</a></div>
+      <div class="nav-item"><a href="contact-lenses.html" class="nav-link active"><i class="fas fa-circle-dot"></i> Contact Lenses</a></div>
+      <div class="nav-item"><a href="reading-frames.html" class="nav-link"><i class="fas fa-book-open-reader"></i> Reading Frames</a></div>
+      <div class="nav-item"><a href="store-locator.html" class="nav-link"><i class="fas fa-location-dot"></i> Stores</a></div>
+      <div class="nav-item"><a href="appointment.html" class="nav-link"><i class="fas fa-calendar-check" style="color:var(--accent)"></i> Book Appointment</a></div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-panel">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;">
+        <a href="../index.html" class="logo" style="gap:10px;"><img src="../logo.png" alt="" style="height:40px;"><span style="font-family:Poppins;font-weight:700;color:var(--primary);font-size:0.95rem;">Saawariya Opticals</span></a>
+        <button onclick="toggleMobileMenu()" style="background:var(--bg);border:none;width:36px;height:36px;border-radius:8px;font-size:1.1rem;cursor:pointer;">✕</button>
+      </div>
+      <nav style="display:flex;flex-direction:column;gap:4px;">
+        <a href="../index.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">🏠 Home</a>
+        <a href="frames.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">👓 Frames</a>
+        <a href="sunglasses.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">🕶️ Sunglasses</a>
+        <a href="contact-lenses.html" style="padding:12px 16px;border-radius:8px;font-weight:500;background:var(--primary-glow);color:var(--primary);">🔵 Contact Lenses</a>
+        <a href="reading-frames.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">📖 Reading Frames</a>
+        <a href="store-locator.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">📍 Stores</a>
+        <a href="appointment.html" style="padding:12px 16px;border-radius:8px;font-weight:500;background:linear-gradient(135deg,#e8b84b,#c99a30);color:#fff;">📅 Book Appointment</a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="page-hero-blob b1"></div>
+      <div class="page-hero-blob b2"></div>
+      <div class="container">
+        <div class="page-hero-inner" data-aos="fade-up">
+          <div class="breadcrumb">
+            <a href="../index.html">Home</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Contact Lenses</span>
+          </div>
+          <div class="page-icon" style="background:linear-gradient(135deg, #10b981, #34d399);"><i class="fas fa-circle-dot"></i></div>
+          <h1>Configure Your <span class="accent">Contact Lenses</span></h1>
+          <p>Pick your favorite brand, color, power & duration in 4 simple steps. We'll prepare your lenses and notify you when ready.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <!-- ── 4-Step Wizard ── -->
+      <div class="wizard" data-aos="fade-up">
+
+        <!-- Step Progress -->
+        <div class="wizard-steps">
+          <div class="wizard-step active" data-step="1">
+            <div class="step-num"><span>1</span></div>
+            <div class="step-label">Brand</div>
+          </div>
+          <div class="wizard-step" data-step="2">
+            <div class="step-num"><span>2</span></div>
+            <div class="step-label">Color</div>
+          </div>
+          <div class="wizard-step" data-step="3">
+            <div class="step-num"><span>3</span></div>
+            <div class="step-label">Power</div>
+          </div>
+          <div class="wizard-step" data-step="4">
+            <div class="step-num"><span>4</span></div>
+            <div class="step-label">Duration</div>
+          </div>
+          <div class="wizard-step" data-step="5">
+            <div class="step-num"><span>5</span></div>
+            <div class="step-label">Confirm</div>
+          </div>
+        </div>
+
+        <div class="wizard-body">
+
+          <!-- Step 1: Brand -->
+          <div class="wizard-panel active" data-panel="1">
+            <h2>Choose Your Brand</h2>
+            <p class="helper">All brands are 100% authentic and sourced directly from official distributors.</p>
+            <div class="option-grid" id="brandGrid">
+              <div class="option-card" data-value="Polylite">
+                <span class="opt-icon">🟦</span>
+                <div class="opt-name">Polylite</div>
+                <div class="opt-sub">Soft &amp; breathable</div>
+              </div>
+              <div class="option-card" data-value="Freshlook">
+                <span class="opt-icon">💎</span>
+                <div class="opt-name">Freshlook</div>
+                <div class="opt-sub">Trusted colored lenses</div>
+              </div>
+              <div class="option-card" data-value="Bausch & Lomb">
+                <span class="opt-icon">⭐</span>
+                <div class="opt-name">Bausch &amp; Lomb</div>
+                <div class="opt-sub">Premium global brand</div>
+              </div>
+              <div class="option-card" data-value="Acme">
+                <span class="opt-icon">🟣</span>
+                <div class="opt-name">Acme</div>
+                <div class="opt-sub">Comfort focused</div>
+              </div>
+              <div class="option-card" data-value="Copper Vision">
+                <span class="opt-icon">🟢</span>
+                <div class="opt-name">Copper Vision</div>
+                <div class="opt-sub">High clarity</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Color -->
+          <div class="wizard-panel" data-panel="2">
+            <h2>Pick a Color</h2>
+            <p class="helper">Choose "Clear" for vision correction only, or pick a color to express your style.</p>
+            <div class="option-grid" id="colorGrid">
+              <div class="option-card" data-value="Clear">
+                <div class="color-swatch" style="background: rgba(180, 200, 240, 0.4); border-style: dashed;"></div>
+                <div class="opt-name">Clear</div>
+                <div class="opt-sub">Vision only</div>
+              </div>
+              <div class="option-card" data-value="Blue">
+                <div class="color-swatch" style="background: radial-gradient(circle at 30% 30%, #4dabf7, #1864ab);"></div>
+                <div class="opt-name">Blue</div>
+              </div>
+              <div class="option-card" data-value="Green">
+                <div class="color-swatch" style="background: radial-gradient(circle at 30% 30%, #51cf66, #2b8a3e);"></div>
+                <div class="opt-name">Green</div>
+              </div>
+              <div class="option-card" data-value="Hazel">
+                <div class="color-swatch" style="background: radial-gradient(circle at 30% 30%, #b07d3a, #6a4015);"></div>
+                <div class="opt-name">Hazel</div>
+              </div>
+              <div class="option-card" data-value="Gray">
+                <div class="color-swatch" style="background: radial-gradient(circle at 30% 30%, #ced4da, #495057);"></div>
+                <div class="opt-name">Gray</div>
+              </div>
+              <div class="option-card" data-value="Brown">
+                <div class="color-swatch" style="background: radial-gradient(circle at 30% 30%, #8b5a2b, #4d2e10);"></div>
+                <div class="opt-name">Brown</div>
+              </div>
+              <div class="option-card" data-value="Black">
+                <div class="color-swatch" style="background: radial-gradient(circle at 30% 30%, #495057, #000);"></div>
+                <div class="opt-name">Black</div>
+              </div>
+              <div class="option-card" data-value="Violet">
+                <div class="color-swatch" style="background: radial-gradient(circle at 30% 30%, #b197fc, #5f3dc4);"></div>
+                <div class="opt-name">Violet</div>
+              </div>
+              <div class="option-card" data-value="Pink">
+                <div class="color-swatch" style="background: radial-gradient(circle at 30% 30%, #f783ac, #a61e4d);"></div>
+                <div class="opt-name">Pink</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: Power -->
+          <div class="wizard-panel" data-panel="3">
+            <h2>Enter Your Power</h2>
+            <p class="helper">If you don't know your power, we recommend a free eye test at our store. Skip with "Plano (0.00)" for cosmetic lenses.</p>
+            <div class="form-grid" style="max-width: 640px; margin: 0 auto;">
+              <div class="form-field">
+                <label>Right Eye (OD) — Sphere</label>
+                <select id="powerR">
+                  <option value="">Select power</option>
+                  <option value="Plano (0.00)">Plano (0.00) — no power</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label>Left Eye (OS) — Sphere</label>
+                <select id="powerL">
+                  <option value="">Select power</option>
+                  <option value="Plano (0.00)">Plano (0.00) — no power</option>
+                </select>
+              </div>
+              <div class="form-field full">
+                <label style="display:flex;align-items:center;gap:8px;">
+                  <input type="checkbox" id="samePower" style="width:auto;"> Same power for both eyes
+                </label>
+              </div>
+              <div class="form-field full">
+                <label>I don't know my power — please advise</label>
+                <button type="button" class="btn btn-outline" style="width:fit-content;" onclick="window.location.href='appointment.html?service=eye-test'">
+                  <i class="fas fa-eye"></i> Book Free Eye Test
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4: Duration -->
+          <div class="wizard-panel" data-panel="4">
+            <h2>Choose Duration</h2>
+            <p class="helper">How long would you like each lens to last? Daily disposables are the most hygienic option.</p>
+            <div class="option-grid" id="durationGrid">
+              <div class="option-card" data-value="1 Day Disposable" data-price="50">
+                <span class="opt-icon">🌞</span>
+                <div class="opt-name">1 Day</div>
+                <div class="opt-sub">Per lens · daily disposable</div>
+              </div>
+              <div class="option-card" data-value="1 Month" data-price="450">
+                <span class="opt-icon">📅</span>
+                <div class="opt-name">1 Month</div>
+                <div class="opt-sub">Per pair · monthly</div>
+              </div>
+              <div class="option-card" data-value="3 Months" data-price="1100">
+                <span class="opt-icon">🗓️</span>
+                <div class="opt-name">3 Months</div>
+                <div class="opt-sub">Per pair · quarterly</div>
+              </div>
+              <div class="option-card" data-value="6 Months" data-price="1800">
+                <span class="opt-icon">📆</span>
+                <div class="opt-name">6 Months</div>
+                <div class="opt-sub">Per pair · half-yearly</div>
+              </div>
+              <div class="option-card" data-value="1 Year" data-price="2999">
+                <span class="opt-icon">⏳</span>
+                <div class="opt-name">1 Year</div>
+                <div class="opt-sub">Per pair · annual</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 5: Summary -->
+          <div class="wizard-panel" data-panel="5">
+            <h2>Review Your Order</h2>
+            <p class="helper">Confirm your selection. Our team will contact you to confirm and arrange delivery.</p>
+
+            <div class="summary-card">
+              <div class="summary-row"><span class="label">Brand</span><span class="val" id="sBrand">—</span></div>
+              <div class="summary-row"><span class="label">Color</span><span class="val" id="sColor">—</span></div>
+              <div class="summary-row"><span class="label">Right Eye Power</span><span class="val" id="sPowerR">—</span></div>
+              <div class="summary-row"><span class="label">Left Eye Power</span><span class="val" id="sPowerL">—</span></div>
+              <div class="summary-row"><span class="label">Duration</span><span class="val" id="sDuration">—</span></div>
+              <div class="summary-row"><span class="label">Approx. Price</span><span class="val" id="sPrice">₹0</span></div>
+            </div>
+
+            <div class="form-grid" style="margin-top: 18px;">
+              <div class="form-field">
+                <label>Your Name *</label>
+                <input type="text" id="custName" required placeholder="Enter your name">
+              </div>
+              <div class="form-field">
+                <label>Mobile Number *</label>
+                <input type="tel" id="custPhone" required pattern="[0-9]{10}" placeholder="10-digit mobile">
+              </div>
+            </div>
+
+            <div id="successMsg" class="success-banner" style="display:none;">
+              <div class="check"><i class="fas fa-check"></i></div>
+              <h2>Order Placed!</h2>
+              <p>We'll contact you within 2 hours to confirm and arrange pickup or delivery.</p>
+              <a href="../index.html" class="btn btn-primary"><i class="fas fa-home"></i> Back to Home</a>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div class="wizard-actions" id="wizardActions">
+            <button class="btn btn-outline" id="prevBtn" onclick="changeStep(-1)" disabled><i class="fas fa-arrow-left"></i> Back</button>
+            <button class="btn btn-primary" id="nextBtn" onclick="changeStep(1)" disabled>Next <i class="fas fa-arrow-right"></i></button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Info Cards -->
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; margin: 60px auto;">
+        <div class="cta-dual-card">
+          <div class="cta-dual-icon"><i class="fas fa-shield-halved"></i></div>
+          <div class="cta-dual-body">
+            <h3>100% Authentic</h3>
+            <p>All lenses sourced directly from official brand distributors.</p>
+          </div>
+        </div>
+        <div class="cta-dual-card">
+          <div class="cta-dual-icon"><i class="fas fa-truck-fast"></i></div>
+          <div class="cta-dual-body">
+            <h3>Free Delivery</h3>
+            <p>Free home delivery on orders above ₹999 across Mumbai.</p>
+          </div>
+        </div>
+        <div class="cta-dual-card">
+          <div class="cta-dual-icon"><i class="fas fa-headset"></i></div>
+          <div class="cta-dual-body">
+            <h3>Expert Advice</h3>
+            <p>Call us for personalized recommendations based on your needs.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container" style="text-align:center; padding: 30px 0;">
+      <p style="color: var(--text-secondary);">© 2026 Saawariya Opticals · "We help you look better"</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+  <script>
+    AOS.init({ duration: 700, once: true });
+    function toggleMobileMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+      document.getElementById('hamburger').classList.toggle('active');
+    }
+
+    /* ── Wizard state ── */
+    const state = { step: 1, brand: null, color: null, powerR: null, powerL: null, duration: null, price: 0 };
+    const totalSteps = 5;
+
+    /* Populate power options dynamically: -10.00 to +10.00 in 0.25 steps */
+    function fillPowerOptions(id) {
+      const sel = document.getElementById(id);
+      for (let p = -10; p <= 10; p += 0.25) {
+        if (p === 0) continue;
+        const sign = p > 0 ? '+' : '';
+        const opt = document.createElement('option');
+        opt.value = `${sign}${p.toFixed(2)}`;
+        opt.textContent = `${sign}${p.toFixed(2)}`;
+        sel.appendChild(opt);
+      }
+    }
+    fillPowerOptions('powerR');
+    fillPowerOptions('powerL');
+
+    /* Same-power checkbox */
+    document.getElementById('samePower').addEventListener('change', e => {
+      const l = document.getElementById('powerL');
+      l.disabled = e.target.checked;
+      if (e.target.checked) l.value = document.getElementById('powerR').value;
+      validate();
+    });
+    document.getElementById('powerR').addEventListener('change', () => {
+      if (document.getElementById('samePower').checked) {
+        document.getElementById('powerL').value = document.getElementById('powerR').value;
+      }
+      validate();
+    });
+    document.getElementById('powerL').addEventListener('change', validate);
+
+    /* Option card handlers */
+    function bindOptionGrid(gridId, stateKey, priceKey) {
+      document.querySelectorAll(`#${gridId} .option-card`).forEach(card => {
+        card.addEventListener('click', () => {
+          document.querySelectorAll(`#${gridId} .option-card`).forEach(c => c.classList.remove('selected'));
+          card.classList.add('selected');
+          state[stateKey] = card.dataset.value;
+          if (priceKey && card.dataset.price) state[priceKey] = parseInt(card.dataset.price);
+          validate();
+        });
+      });
+    }
+    bindOptionGrid('brandGrid', 'brand');
+    bindOptionGrid('colorGrid', 'color');
+    bindOptionGrid('durationGrid', 'duration', 'price');
+
+    function validate() {
+      const next = document.getElementById('nextBtn');
+      let ok = false;
+      switch (state.step) {
+        case 1: ok = !!state.brand; break;
+        case 2: ok = !!state.color; break;
+        case 3:
+          state.powerR = document.getElementById('powerR').value;
+          state.powerL = document.getElementById('powerL').value;
+          ok = state.powerR && state.powerL;
+          break;
+        case 4: ok = !!state.duration; break;
+        case 5: ok = true; break;
+      }
+      next.disabled = !ok;
+      if (state.step === totalSteps) {
+        next.innerHTML = '<i class="fas fa-check"></i> Place Order';
+      } else {
+        next.innerHTML = 'Next <i class="fas fa-arrow-right"></i>';
+      }
+    }
+
+    function changeStep(dir) {
+      if (state.step === totalSteps && dir === 1) {
+        // submit
+        return placeOrder();
+      }
+      const newStep = state.step + dir;
+      if (newStep < 1 || newStep > totalSteps) return;
+      state.step = newStep;
+      document.querySelectorAll('.wizard-panel').forEach(p => p.classList.remove('active'));
+      document.querySelector(`.wizard-panel[data-panel="${newStep}"]`).classList.add('active');
+      document.querySelectorAll('.wizard-step').forEach(s => {
+        const stepN = parseInt(s.dataset.step);
+        s.classList.toggle('active', stepN === newStep);
+        s.classList.toggle('done', stepN < newStep);
+      });
+      document.getElementById('prevBtn').disabled = newStep === 1;
+      if (newStep === totalSteps) renderSummary();
+      validate();
+      window.scrollTo({ top: document.querySelector('.wizard').offsetTop - 60, behavior: 'smooth' });
+    }
+
+    function renderSummary() {
+      document.getElementById('sBrand').textContent = state.brand || '—';
+      document.getElementById('sColor').textContent = state.color || '—';
+      document.getElementById('sPowerR').textContent = state.powerR || '—';
+      document.getElementById('sPowerL').textContent = state.powerL || '—';
+      document.getElementById('sDuration').textContent = state.duration || '—';
+      document.getElementById('sPrice').textContent = '₹' + state.price.toLocaleString();
+    }
+
+    function placeOrder() {
+      const name = document.getElementById('custName').value;
+      const phone = document.getElementById('custPhone').value;
+      if (!name || !phone) {
+        alert('Please enter your name and mobile number.');
+        return;
+      }
+      const msg = encodeURIComponent(
+        `Hi Saawariya Opticals! New Contact Lens Order:\n\n` +
+        `👤 Name: ${name}\n📞 Phone: ${phone}\n\n` +
+        `🏷️ Brand: ${state.brand}\n🎨 Color: ${state.color}\n` +
+        `👁️ Right Eye: ${state.powerR}\n👁️ Left Eye: ${state.powerL}\n` +
+        `⏳ Duration: ${state.duration}\n💰 Approx Price: ₹${state.price}\n\n` +
+        `Please confirm availability.`
+      );
+      // Show success
+      document.getElementById('successMsg').style.display = 'block';
+      document.querySelector('.summary-card').style.display = 'none';
+      document.querySelector('#wizardActions').style.display = 'none';
+      document.querySelectorAll('.form-grid').forEach(f => f.style.display = 'none');
+      // Open WhatsApp in new tab
+      setTimeout(() => window.open(`https://wa.me/919999999999?text=${msg}`, '_blank'), 800);
+    }
+
+    if (window.Lenis) {
+      const lenis = new Lenis({ duration: 1.1 });
+      function raf(t){ lenis.raf(t); requestAnimationFrame(raf); }
+      requestAnimationFrame(raf);
+    }
+
+    const fab = document.createElement('a');
+    fab.href = 'https://wa.me/919999999999';
+    fab.target = '_blank';
+    fab.className = 'whatsapp-fab';
+    fab.innerHTML = '<i class="fab fa-whatsapp"></i>';
+    document.body.appendChild(fab);
+  </script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Designer sunglasses for Men, Women, Kids — featuring Ray-Ban, Oakley, Vogue, Carrera and more. 100% UV protection.">
+  <title>Sunglasses | Saawariya Opticals</title>
+  <meta name="theme-color" content="#2b3190">
+  <link rel="icon" type="image/png" href="../logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+  <div class="announcement-bar">
+    <div class="ticker">
+      <span><i class="fas fa-shield-halved"></i> 100% UV400 Protection on all sunglasses</span>
+      <span><i class="fas fa-tag"></i> Up to 50% off designer brands</span>
+      <span><i class="fas fa-truck-fast"></i> Free shipping above ₹999</span>
+    </div>
+  </div>
+
+  <header class="header" id="mainHeader">
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <img src="../logo.png" alt="Saawariya Opticals Logo">
+        <div class="logo-text"><span class="name">Saawariya Opticals</span><span class="tagline">We help you look better</span></div>
+      </a>
+      <div class="search-bar">
+        <input type="text" placeholder="Search sunglasses..." autocomplete="off">
+        <button type="button"><i class="fas fa-search"></i></button>
+      </div>
+      <div class="header-actions">
+        <button class="header-action-btn" onclick="window.location.href='appointment.html'"><i class="fas fa-calendar-check"></i><span>Appointment</span></button>
+        <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="main-nav-inner">
+      <div class="nav-item"><a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></div>
+      <div class="nav-item"><a href="frames.html" class="nav-link"><i class="fas fa-glasses"></i> Frames</a></div>
+      <div class="nav-item"><a href="sunglasses.html" class="nav-link active"><i class="fas fa-sun"></i> Sunglasses</a></div>
+      <div class="nav-item"><a href="contact-lenses.html" class="nav-link"><i class="fas fa-circle-dot"></i> Contact Lenses</a></div>
+      <div class="nav-item"><a href="reading-frames.html" class="nav-link"><i class="fas fa-book-open-reader"></i> Reading Frames</a></div>
+      <div class="nav-item"><a href="store-locator.html" class="nav-link"><i class="fas fa-location-dot"></i> Stores</a></div>
+      <div class="nav-item"><a href="appointment.html" class="nav-link"><i class="fas fa-calendar-check" style="color:var(--accent)"></i> Book Appointment</a></div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-panel">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;">
+        <a href="../index.html" class="logo" style="gap:10px;"><img src="../logo.png" alt="" style="height:40px;"><span style="font-family:Poppins;font-weight:700;color:var(--primary);font-size:0.95rem;">Saawariya Opticals</span></a>
+        <button onclick="toggleMobileMenu()" style="background:var(--bg);border:none;width:36px;height:36px;border-radius:8px;font-size:1.1rem;cursor:pointer;">✕</button>
+      </div>
+      <nav style="display:flex;flex-direction:column;gap:4px;">
+        <a href="../index.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">🏠 Home</a>
+        <a href="frames.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">👓 Frames</a>
+        <a href="sunglasses.html" style="padding:12px 16px;border-radius:8px;font-weight:500;background:var(--primary-glow);color:var(--primary);">🕶️ Sunglasses</a>
+        <a href="contact-lenses.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">🔵 Contact Lenses</a>
+        <a href="reading-frames.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">📖 Reading Frames</a>
+        <a href="store-locator.html" style="padding:12px 16px;border-radius:8px;font-weight:500;color:var(--text-secondary);">📍 Stores</a>
+        <a href="appointment.html" style="padding:12px 16px;border-radius:8px;font-weight:500;background:linear-gradient(135deg,#e8b84b,#c99a30);color:#fff;">📅 Book Appointment</a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="page-hero-blob b1"></div>
+      <div class="page-hero-blob b2"></div>
+      <div class="container">
+        <div class="page-hero-inner" data-aos="fade-up">
+          <div class="breadcrumb">
+            <a href="../index.html">Home</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Sunglasses</span>
+          </div>
+          <div class="page-icon" style="background:linear-gradient(135deg, #f59e0b, #e8b84b);"><i class="fas fa-sun"></i></div>
+          <h1>Designer <span class="accent">Sunglasses</span></h1>
+          <p>Step into style with our curated collection — for men, women & kids. Premium brands, 100% UV protection, and looks that turn heads.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <!-- Category Tabs -->
+        <div class="tab-bar" id="catTabs" data-aos="fade-up">
+          <button class="tab-btn active" data-cat="all"><i class="fas fa-th"></i> All</button>
+          <button class="tab-btn" data-cat="men"><i class="fas fa-mars"></i> Men</button>
+          <button class="tab-btn" data-cat="women"><i class="fas fa-venus"></i> Women</button>
+          <button class="tab-btn" data-cat="kids"><i class="fas fa-child"></i> Kids</button>
+          <button class="tab-btn" data-cat="new"><i class="fas fa-sparkles"></i> New Arrivals</button>
+          <button class="tab-btn" data-cat="trending"><i class="fas fa-fire"></i> Trending</button>
+        </div>
+
+        <!-- Brand Chips -->
+        <div class="brand-strip" id="brandChips" data-aos="fade-up">
+          <span class="brand-chip active" data-brand="all">All Brands</span>
+          <span class="brand-chip" data-brand="ray-ban">Ray-Ban</span>
+          <span class="brand-chip" data-brand="oakley">Oakley</span>
+          <span class="brand-chip" data-brand="vogue">Vogue</span>
+          <span class="brand-chip" data-brand="carrera">Carrera</span>
+          <span class="brand-chip" data-brand="fastrack">Fastrack</span>
+          <span class="brand-chip" data-brand="polaroid">Polaroid</span>
+          <span class="brand-chip" data-brand="gucci">Gucci</span>
+          <span class="brand-chip" data-brand="titan">Titan</span>
+        </div>
+
+        <!-- Result count -->
+        <div style="text-align:center; margin: 20px 0; color: var(--text-muted); font-size: 0.9rem;">
+          <span id="resultCount">0</span> sunglasses available
+        </div>
+
+        <!-- Products Grid -->
+        <div class="thumb-grid" id="sunglassesGrid"></div>
+
+        <!-- CTA Banner -->
+        <div style="margin-top: 60px; padding: 40px 30px; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); border-radius: 24px; text-align:center; color:#fff;" data-aos="zoom-in">
+          <h2 style="font-family: Poppins; margin-bottom: 12px;">Can't decide? Visit our store!</h2>
+          <p style="opacity: 0.9; margin-bottom: 24px; max-width: 540px; margin-left:auto; margin-right:auto;">Try on 500+ sunglasses in person. Our experts will help you find the perfect match for your face shape.</p>
+          <a href="store-locator.html" class="btn btn-accent" style="display:inline-flex;"><i class="fas fa-location-dot"></i> Find a Store Near You</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container" style="text-align:center; padding: 30px 0;">
+      <p style="color: var(--text-secondary);">© 2026 Saawariya Opticals · "We help you look better"</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt/dist/vanilla-tilt.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+  <script>
+    AOS.init({ duration: 700, once: true });
+
+    function toggleMobileMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+      document.getElementById('hamburger').classList.toggle('active');
+    }
+
+    /* Demo sunglasses dataset */
+    const SUN = [
+      { id:1, name:'Aviator Classic Gold', brand:'ray-ban', cat:['men','trending'], price:5999, mrp:7999, icon:'🕶️' },
+      { id:2, name:'Wayfarer Black', brand:'ray-ban', cat:['men','women','trending'], price:4999, mrp:6499, icon:'🕶️' },
+      { id:3, name:'Holbrook XL', brand:'oakley', cat:['men','new'], price:6499, mrp:8999, icon:'🕶️', badge:'NEW', badgeClass:'new' },
+      { id:4, name:'Vogue VO5266', brand:'vogue', cat:['women','trending'], price:3499, mrp:4999, icon:'🕶️' },
+      { id:5, name:'Carrera Square', brand:'carrera', cat:['men','women'], price:7999, mrp:9999, icon:'🕶️' },
+      { id:6, name:'Fastrack Sporty', brand:'fastrack', cat:['men','kids'], price:999, mrp:1499, icon:'🕶️' },
+      { id:7, name:'Polaroid Polarized', brand:'polaroid', cat:['men','women'], price:2499, mrp:3499, icon:'🕶️' },
+      { id:8, name:'Gucci GG Signature', brand:'gucci', cat:['women','new'], price:14999, mrp:19999, icon:'🕶️', badge:'NEW', badgeClass:'new' },
+      { id:9, name:'Titan Trends', brand:'titan', cat:['men','women'], price:1799, mrp:2499, icon:'🕶️' },
+      { id:10, name:'Kids Cute Cat-Eye', brand:'fastrack', cat:['kids','new'], price:799, mrp:1199, icon:'🕶️', badge:'KIDS' },
+      { id:11, name:'Cat-Eye Tortoise', brand:'vogue', cat:['women','new'], price:2999, mrp:4299, icon:'🕶️', badge:'NEW', badgeClass:'new' },
+      { id:12, name:'Sport Wrap', brand:'oakley', cat:['men','trending'], price:5499, mrp:7499, icon:'🕶️', badge:'TRENDING', badgeClass:'trending' },
+      { id:13, name:'Round Vintage', brand:'ray-ban', cat:['men','women','trending'], price:5999, mrp:7999, icon:'🕶️', badge:'TRENDING', badgeClass:'trending' },
+      { id:14, name:'Kids Aviator', brand:'fastrack', cat:['kids'], price:899, mrp:1299, icon:'🕶️' },
+      { id:15, name:'Designer Oversized', brand:'gucci', cat:['women','trending'], price:12999, mrp:16999, icon:'🕶️' }
+    ];
+
+    // Parse ?cat=X query
+    const params = new URLSearchParams(location.search);
+    let activeCat = params.get('cat') || 'all', activeBrand = 'all';
+    if (activeCat !== 'all') {
+      document.querySelectorAll('#catTabs .tab-btn').forEach(b => {
+        b.classList.toggle('active', b.dataset.cat === activeCat);
+      });
+    }
+
+    function renderSun() {
+      const grid = document.getElementById('sunglassesGrid');
+      const filtered = SUN.filter(s =>
+        (activeCat === 'all' || s.cat.includes(activeCat)) &&
+        (activeBrand === 'all' || s.brand === activeBrand)
+      );
+      document.getElementById('resultCount').textContent = filtered.length;
+      if (!filtered.length) {
+        grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text-muted);"><i class="fas fa-search" style="font-size:2rem; margin-bottom:12px;"></i><p>No sunglasses match these filters. Try another combination.</p></div>';
+        return;
+      }
+      grid.innerHTML = filtered.map(s => `
+        <div class="thumb-card" onclick="enquire('${s.name}', '${s.brand}')">
+          ${s.badge ? `<span class="thumb-badge ${s.badgeClass||''}">${s.badge}</span>` : ''}
+          <div class="thumb-image" style="background:linear-gradient(145deg, #fff8e7, #fef3c7); font-size: 4.5rem;">${s.icon}</div>
+          <div class="thumb-body">
+            <div class="thumb-brand">${s.brand.replace('-',' ')}</div>
+            <div class="thumb-name">${s.name}</div>
+            <div class="thumb-price">
+              <span class="now">₹${s.price.toLocaleString()}</span>
+              <span class="was">₹${s.mrp.toLocaleString()}</span>
+              <span class="off">${Math.round((1-s.price/s.mrp)*100)}% off</span>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function enquire(name, brand) {
+      const msg = encodeURIComponent(`Hi Saawariya Opticals! I'm interested in: "${name}" by ${brand}. Please share more details.`);
+      window.open(`https://wa.me/919999999999?text=${msg}`, '_blank');
+    }
+
+    document.querySelectorAll('#catTabs .tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('#catTabs .tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeCat = btn.dataset.cat;
+        renderSun();
+      });
+    });
+    document.querySelectorAll('#brandChips .brand-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        document.querySelectorAll('#brandChips .brand-chip').forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        activeBrand = chip.dataset.brand;
+        renderSun();
+      });
+    });
+
+    renderSun();
+
+    if (window.Lenis) {
+      const lenis = new Lenis({ duration: 1.1 });
+      function raf(t){ lenis.raf(t); requestAnimationFrame(raf); }
+      requestAnimationFrame(raf);
+    }
+
+    const fab = document.createElement('a');
+    fab.href = 'https://wa.me/919999999999';
+    fab.target = '_blank';
+    fab.className = 'whatsapp-fab';
+    fab.innerHTML = '<i class="fab fa-whatsapp"></i>';
+    document.body.appendChild(fab);
+  </script>
+</body>
+</html>
