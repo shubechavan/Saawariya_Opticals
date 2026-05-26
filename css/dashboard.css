@@ -1057,3 +1057,259 @@
 @keyframes floatY {
   50% { transform: translateY(-6px); }
 }
+
+/* ============================================================
+   ─────────────────  MOBILE-FIRST OVERRIDES  ────────────────
+   Applied progressively from larger phones down to small ones.
+   ============================================================ */
+
+/* Remove tap-highlight, enable smooth touch scrolling everywhere */
+* { -webkit-tap-highlight-color: transparent; }
+html, body { -webkit-overflow-scrolling: touch; }
+
+/* Inputs at >=16px to prevent iOS Safari zoom on focus */
+input, select, textarea, button { font-size: 16px; }
+
+/* Safe-area padding for iPhone notch */
+@supports (padding: env(safe-area-inset-top)) {
+  body { padding-bottom: env(safe-area-inset-bottom); }
+  .whatsapp-fab { bottom: calc(20px + env(safe-area-inset-bottom)); }
+}
+
+/* Disable hover states on touch devices (prevents stuck hover) */
+@media (hover: none) {
+  .dash-card:hover { transform: none; }
+  .dash-card:hover .dash-card-icon { transform: none; }
+  .thumb-card:hover { transform: none; }
+  .option-card:hover { transform: none; }
+  .cta-dual-card:hover { transform: none; }
+}
+
+/* ────── 1024px and below ────── */
+@media (max-width: 1024px) {
+  .page-hero { padding: 60px 0 40px; }
+  .page-hero h1 { font-size: clamp(1.8rem, 4.5vw, 2.6rem); }
+  .dashboard-section { padding: 64px 0 80px; }
+}
+
+/* ────── 768px tablet/phone ────── */
+@media (max-width: 768px) {
+  /* Hero - smaller, lighter */
+  .hero { min-height: auto; padding: 40px 0 50px; }
+  .hero-title { font-size: clamp(1.8rem, 7vw, 2.4rem) !important; }
+  .hero-description { font-size: 0.95rem; }
+  .hero-particles { opacity: 0.4; } /* keep but tone down */
+  .hero-cta { flex-direction: column; align-items: stretch; }
+  .hero-cta .btn { justify-content: center; }
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    text-align: center;
+  }
+
+  /* Announcement bar - tighter */
+  .announcement-bar { font-size: 0.75rem; padding: 6px 0; }
+  .ticker { gap: 30px; }
+
+  /* Header - tighter, hide tagline */
+  .header { padding: 10px 0; }
+  .header-inner { gap: 10px; }
+  .logo img { height: 36px; }
+  .logo-text .tagline { display: none; }
+  .logo-text .name { font-size: 0.85rem; }
+  .search-bar { display: none; }
+  .header-action-btn span { display: none; }
+  .header-action-btn { padding: 8px; min-width: 40px; }
+
+  /* Dashboard - 2-col grid, less padding */
+  .dashboard-section { padding: 50px 0 60px; }
+  .dashboard-grid { gap: 16px; }
+  .dash-card {
+    padding: 22px 20px;
+    gap: 16px;
+    border-radius: 20px;
+  }
+  .dash-card-icon { width: 52px; height: 52px; font-size: 1.4rem; border-radius: 14px; }
+  .dash-card-body h3 { font-size: 1.15rem; margin-bottom: 6px; }
+  .dash-card-body p { font-size: 0.88rem; margin-bottom: 12px; }
+  .dash-card::after { top: 14px; right: 16px; font-size: 12px; }
+  /* Disable 3D tilt scale on mobile */
+  .dash-card { transform: none !important; }
+
+  /* Page hero - tighter */
+  .page-hero { padding: 40px 0 32px; }
+  .page-hero .page-icon { width: 64px; height: 64px; font-size: 1.6rem; margin-bottom: 16px; border-radius: 18px; }
+  .page-hero h1 { font-size: clamp(1.6rem, 6vw, 2rem); }
+  .page-hero p { font-size: 0.95rem; padding: 0 12px; }
+  .page-hero-blob { width: 200px; height: 200px; filter: blur(40px); }
+  .breadcrumb { font-size: 0.78rem; margin-bottom: 14px; }
+
+  /* CTA Dual cards - stack with reduced margin */
+  .cta-dual { margin: -20px auto 40px; padding: 0 16px; gap: 14px; }
+  .cta-dual-card { padding: 22px 20px; gap: 14px; border-radius: 18px; }
+  .cta-dual-icon { width: 48px; height: 48px; font-size: 1.2rem; border-radius: 12px; }
+  .cta-dual-body h3 { font-size: 1rem; }
+  .cta-dual-body p { font-size: 0.85rem; }
+
+  /* Wizards - tighter */
+  .wizard { margin: 28px 12px; border-radius: 20px; }
+  .wizard-body { padding: 24px 18px; }
+  .wizard-panel h2 { font-size: 1.3rem; }
+  .wizard-panel .helper { font-size: 0.88rem; margin-bottom: 20px; }
+  .wizard-actions { flex-direction: column-reverse; gap: 10px; }
+  .wizard-actions .btn { width: 100%; padding: 14px 20px; justify-content: center; }
+
+  /* Option grid - 2 cols on tablet, single on phone */
+  .option-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .option-card { padding: 16px 12px; border-radius: 14px; }
+  .option-card .opt-icon { font-size: 1.6rem; margin-bottom: 6px; }
+  .option-card .opt-name { font-size: 0.88rem; }
+  .option-card .opt-sub { font-size: 0.72rem; }
+  .color-swatch { width: 48px; height: 48px; }
+
+  /* Section padding tighten */
+  .section { padding: 50px 0; }
+  .section-title { font-size: 1.6rem; }
+  .section-subtitle { font-size: 0.95rem; padding: 0 12px; }
+  .section-header { margin-bottom: 32px; }
+
+  /* Thumb grid - 2 cols on tablet */
+  .thumb-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .thumb-body { padding: 14px 14px 16px; }
+  .thumb-name { font-size: 0.92rem; margin: 4px 0 8px; }
+  .thumb-price .now { font-size: 1rem; }
+  .thumb-image { font-size: 3rem; }
+
+  /* Tab bar - horizontal scroll */
+  .tab-bar {
+    margin: 24px -16px;
+    padding: 6px 8px;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    width: auto;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    scrollbar-width: none;
+  }
+  .tab-bar::-webkit-scrollbar { display: none; }
+  .tab-btn { padding: 9px 16px; font-size: 0.82rem; white-space: nowrap; }
+
+  /* Brand chip strip */
+  .brand-strip { gap: 8px; padding: 0 8px; }
+  .brand-chip { padding: 7px 13px; font-size: 0.78rem; }
+
+  /* Store cards */
+  .store-grid { gap: 20px; }
+  .store-card { border-radius: 20px; }
+  .store-body { padding: 22px 18px; }
+  .store-name { font-size: 1.2rem; margin-bottom: 10px; }
+  .store-detail { padding: 8px 0; font-size: 0.88rem; gap: 10px; }
+  .store-detail i { width: 28px; height: 28px; font-size: 0.78rem; }
+  .store-actions { gap: 8px; }
+  .store-actions .btn { min-width: 0; padding: 12px 14px; font-size: 0.85rem; }
+
+  /* Form fields - tap friendly */
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    padding: 14px 14px;
+    border-radius: 10px;
+    min-height: 48px;
+  }
+  .form-field label { font-size: 0.82rem; }
+
+  /* Dropzone smaller */
+  .dropzone { padding: 28px 18px; }
+  .dropzone i { font-size: 2rem; }
+  .dropzone h4 { font-size: 0.95rem; }
+  .dropzone p { font-size: 0.78rem; }
+
+  /* WhatsApp FAB - smaller, right side on mobile so it doesn't cover content */
+  .whatsapp-fab {
+    width: 50px; height: 50px;
+    font-size: 1.3rem;
+    bottom: 16px; left: auto; right: 16px;
+  }
+
+  /* Buttons - full tap height */
+  .btn { min-height: 44px; padding: 12px 20px; }
+
+  /* Mobile menu - wider panel for small phones */
+  .mobile-menu-panel { width: 88%; max-width: 320px; padding: 20px; }
+}
+
+/* ────── 600px small phone ────── */
+@media (max-width: 600px) {
+  /* Hero further */
+  .hero-stats { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .hero-stat-number { font-size: 1.8rem !important; }
+  .hero-stat-label { font-size: 0.7rem; }
+
+  /* Dashboard - single column */
+  .dashboard-grid { grid-template-columns: 1fr; gap: 14px; }
+  .dash-card { padding: 20px 18px; }
+
+  /* Thumb grid - single column on tiny phones */
+  .thumb-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+
+  /* Wizard steps - super compact */
+  .wizard-steps { padding: 14px 12px; }
+  .step-num { width: 30px; height: 30px; font-size: 0.8rem; }
+  .wizard-step + .wizard-step::before { width: 12px; margin-right: 4px; }
+
+  /* Option grid - keep 2 cols (better than 1 col stacking) */
+  .option-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Section title smaller */
+  .section-title { font-size: 1.4rem; line-height: 1.25; }
+  .section-label { font-size: 0.75rem; }
+
+  /* Container side padding */
+  .container { padding: 0 14px; }
+
+  /* CTA dual - tighter */
+  .cta-dual { padding: 0 12px; }
+  .cta-dual-card { padding: 18px 16px; }
+
+  /* Store actions - stack */
+  .store-actions .btn { flex: 1 1 100%; }
+
+  /* Page hero title */
+  .page-hero { padding: 32px 0 24px; }
+  .page-hero h1 { font-size: 1.6rem; padding: 0 12px; }
+  .page-hero .page-icon { width: 56px; height: 56px; font-size: 1.4rem; margin-bottom: 14px; }
+}
+
+/* ────── 380px very small phone ────── */
+@media (max-width: 380px) {
+  .logo-text .name { font-size: 0.78rem; }
+  .header-action-btn { width: 36px; height: 36px; padding: 6px; }
+  .hamburger { padding: 6px; }
+  .dash-card { padding: 18px 16px; gap: 12px; }
+  .dash-card-icon { width: 46px; height: 46px; font-size: 1.25rem; }
+  .dash-card-body h3 { font-size: 1.05rem; }
+  .dash-card-body p { font-size: 0.82rem; }
+  .wizard-body { padding: 20px 14px; }
+  .wizard-panel h2 { font-size: 1.15rem; }
+  .option-card { padding: 14px 10px; }
+}
+
+/* ────── Landscape phones — keep hero compact ────── */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero { min-height: auto; padding: 24px 0; }
+  .page-hero { padding: 28px 0 20px; }
+}
+
+/* ────── Reduce motion preference ────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .whatsapp-fab { animation: none; }
+  .pulse-dot::before { animation: none; }
+  .page-icon { animation: none; }
+}

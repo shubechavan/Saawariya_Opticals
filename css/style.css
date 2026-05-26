@@ -581,19 +581,20 @@ input, textarea {
 
 /* Mobile Menu */
 .mobile-menu {
-  display: none;
   position: fixed;
   inset: 0;
   background: rgba(15, 16, 53, 0.6);
   z-index: 9999;
   opacity: 0;
   visibility: hidden;
-  transition: var(--transition);
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .mobile-menu.open {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
 }
 
 .mobile-menu-panel {
