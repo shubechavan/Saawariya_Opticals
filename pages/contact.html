@@ -204,17 +204,45 @@
             Walk in to either of our outlets anytime during business hours, or reach out below. Our opticians are always ready to help you find the perfect eyewear.
           </p>
 
-          <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:40px;">
+          <!-- ── BIG CALL CARDS (impossible to miss) ── -->
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-bottom:24px;">
+            <a href="tel:+919920892344" style="display:block;padding:24px 20px;background:linear-gradient(135deg,#10b981,#059669);border-radius:18px;text-decoration:none;color:#fff;box-shadow:0 16px 36px -10px rgba(16,185,129,0.5);transition:transform 0.3s;">
+              <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+                <div style="width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,0.22);display:grid;place-items:center;font-size:1rem;"><i class="fas fa-phone"></i></div>
+                <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;opacity:0.9;">Bhayander West</div>
+              </div>
+              <div style="font-family:Poppins;font-size:1.5rem;font-weight:800;line-height:1;letter-spacing:-0.01em;">+91 99208 92344</div>
+              <div style="margin-top:10px;font-size:0.78rem;opacity:0.85;">Tap to call · or visit West outlet</div>
+            </a>
+            <a href="tel:+918976797674" style="display:block;padding:24px 20px;background:linear-gradient(135deg,#e8b84b,#c99a30);border-radius:18px;text-decoration:none;color:#fff;box-shadow:0 16px 36px -10px rgba(232,184,75,0.5);transition:transform 0.3s;">
+              <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+                <div style="width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,0.22);display:grid;place-items:center;font-size:1rem;"><i class="fas fa-phone"></i></div>
+                <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;opacity:0.9;">Bhayander East</div>
+              </div>
+              <div style="font-family:Poppins;font-size:1.5rem;font-weight:800;line-height:1;letter-spacing:-0.01em;">+91 89767 97674</div>
+              <div style="margin-top:10px;font-size:0.78rem;opacity:0.85;">Tap to call · or visit East outlet</div>
+            </a>
+          </div>
+
+          <!-- ── WhatsApp Twin Cards ── -->
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:32px;">
+            <a href="https://wa.me/919920892344" target="_blank" style="display:flex;align-items:center;gap:12px;padding:14px 18px;background:#fff;border:2px solid #25d366;border-radius:14px;text-decoration:none;color:#128c7e;font-weight:700;font-size:0.92rem;">
+              <i class="fab fa-whatsapp" style="font-size:1.3rem;color:#25d366;"></i>
+              WhatsApp West
+            </a>
+            <a href="https://wa.me/918976797674" target="_blank" style="display:flex;align-items:center;gap:12px;padding:14px 18px;background:#fff;border:2px solid #25d366;border-radius:14px;text-decoration:none;color:#128c7e;font-weight:700;font-size:0.92rem;">
+              <i class="fab fa-whatsapp" style="font-size:1.3rem;color:#25d366;"></i>
+              WhatsApp East
+            </a>
+          </div>
+
+          <!-- ── Address & Other Info ── -->
+          <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:40px;">
             <div class="contact-info-card">
               <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
               <div class="contact-info-content">
                 <h4>Bhayander West Outlet</h4>
                 <p>Shop No. 11, Kamala Park, Opposite Rajasthan Hall,<br>60 Feet Road, Bhayander West, Maharashtra.</p>
-                <p style="margin-top:8px;">
-                  <a href="tel:+919920892344" style="color:#10b981;font-weight:700;"><i class="fas fa-phone"></i> +91 99208 92344</a>
-                  &nbsp;·&nbsp;
-                  <a href="https://wa.me/919920892344" target="_blank" style="color:#25d366;font-weight:600;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                </p>
               </div>
             </div>
             <div class="contact-info-card">
@@ -222,11 +250,6 @@
               <div class="contact-info-content">
                 <h4>Bhayander East Outlet</h4>
                 <p>Shop No. 21, Janki Heights, Near Mithalal Jain Bungalow,<br>Bhayander East, Maharashtra.</p>
-                <p style="margin-top:8px;">
-                  <a href="tel:+918976797674" style="color:#c99a30;font-weight:700;"><i class="fas fa-phone"></i> +91 89767 97674</a>
-                  &nbsp;·&nbsp;
-                  <a href="https://wa.me/918976797674" target="_blank" style="color:#25d366;font-weight:600;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                </p>
               </div>
             </div>
             <div class="contact-info-card">
@@ -234,18 +257,6 @@
               <div class="contact-info-content">
                 <h4>Business Hours</h4>
                 <p>Monday – Sunday: 10:00 AM – 9:00 PM<br>Open all days including public holidays</p>
-              </div>
-            </div>
-            <div class="contact-info-card">
-              <div class="contact-info-icon" style="background:linear-gradient(135deg,#25d366,#128c7e);color:#fff;"><i class="fab fa-whatsapp"></i></div>
-              <div class="contact-info-content">
-                <h4>WhatsApp Us</h4>
-                <p>Message us for quick assistance, product queries, or to share your prescription:</p>
-                <p style="margin-top:6px;">
-                  <a href="https://wa.me/919920892344" target="_blank" style="color:#25d366;font-weight:700;">West: 99208 92344</a>
-                  &nbsp;·&nbsp;
-                  <a href="https://wa.me/918976797674" target="_blank" style="color:#25d366;font-weight:700;">East: 89767 97674</a>
-                </p>
               </div>
             </div>
             <div class="contact-info-card">
