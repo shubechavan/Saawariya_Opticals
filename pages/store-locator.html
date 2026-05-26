@@ -244,17 +244,7 @@
       document.getElementById('mobileMenu').classList.toggle('open');
       document.getElementById('hamburger').classList.toggle('active');
     }
-    if (window.Lenis) {
-      const lenis = new Lenis({ duration: 1.1 });
-      function raf(t){ lenis.raf(t); requestAnimationFrame(raf); }
-      requestAnimationFrame(raf);
-    }
-    const fab = document.createElement('a');
-    fab.href = 'https://wa.me/919920892344';
-    fab.target = '_blank';
-    fab.className = 'whatsapp-fab';
-    fab.innerHTML = '<i class="fab fa-whatsapp"></i>';
-    document.body.appendChild(fab);
   </script>
+  <script src="../js/dashboard-fx.js"></script>
 </body>
 </html>

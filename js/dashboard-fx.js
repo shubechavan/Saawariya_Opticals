@@ -184,4 +184,116 @@
     fab.innerHTML = '<i class="fab fa-whatsapp"></i>';
     document.body.appendChild(fab);
   }
+
+  /* ---------- 9. Site-wide contact info injection ---------- */
+  const STORES = [
+    { name: 'Bhayander West', phone: '9920892344', phonePretty: '99208 92344' },
+    { name: 'Bhayander East', phone: '8976797674', phonePretty: '89767 97674' }
+  ];
+
+  /* 9a. Add phone numbers to announcement bar ticker */
+  const ticker = document.querySelector('.announcement-bar .ticker');
+  if (ticker && !ticker.querySelector('.ticker-phone')) {
+    const phoneSpan = document.createElement('span');
+    phoneSpan.className = 'ticker-phone';
+    phoneSpan.innerHTML =
+      `<i class="fas fa-phone"></i> West: <a href="tel:+91${STORES[0].phone}" style="color:inherit;text-decoration:underline;">${STORES[0].phonePretty}</a>` +
+      ` &nbsp;·&nbsp; East: <a href="tel:+91${STORES[1].phone}" style="color:inherit;text-decoration:underline;">${STORES[1].phonePretty}</a>`;
+    ticker.insertBefore(phoneSpan, ticker.firstChild);
+  }
+
+  /* 9b. Inject "Call Now" button into header (before hamburger) */
+  const hamburger = document.getElementById('hamburger');
+  if (hamburger && !document.querySelector('.header-call-btn')) {
+    const callBtn = document.createElement('a');
+    callBtn.href = `tel:+91${STORES[0].phone}`;
+    callBtn.className = 'header-action-btn header-call-btn';
+    callBtn.title = `Call ${STORES[0].name}`;
+    callBtn.innerHTML = '<i class="fas fa-phone"></i><span>Call Now</span>';
+    callBtn.style.cssText = 'background:linear-gradient(135deg,#10b981,#059669);color:#fff;border-color:transparent;';
+    hamburger.parentNode.insertBefore(callBtn, hamburger);
+  }
+
+  /* 9c. Add contact section to bottom of mobile menu */
+  const mobileNav = document.querySelector('.mobile-menu-panel nav');
+  if (mobileNav && !document.getElementById('mobileContact')) {
+    const contact = document.createElement('div');
+    contact.id = 'mobileContact';
+    contact.style.cssText =
+      'margin-top:24px;padding-top:20px;border-top:1px solid var(--border);';
+    contact.innerHTML = `
+      <p style="font-size:0.72rem;color:var(--text-muted);margin-bottom:14px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;">
+        <i class="fas fa-phone" style="color:#10b981;"></i> Call Our Stores
+      </p>
+      <a href="tel:+91${STORES[0].phone}" style="display:flex;justify-content:space-between;align-items:center;padding:12px 14px;background:#f0fdf4;border-radius:10px;margin-bottom:8px;color:var(--text-primary);text-decoration:none;">
+        <div>
+          <div style="font-size:0.75rem;color:var(--text-muted);font-weight:600;">Bhayander West</div>
+          <div style="font-weight:700;color:#059669;font-size:0.95rem;">${STORES[0].phonePretty}</div>
+        </div>
+        <i class="fas fa-phone" style="color:#10b981;"></i>
+      </a>
+      <a href="tel:+91${STORES[1].phone}" style="display:flex;justify-content:space-between;align-items:center;padding:12px 14px;background:#fffbeb;border-radius:10px;color:var(--text-primary);text-decoration:none;">
+        <div>
+          <div style="font-size:0.75rem;color:var(--text-muted);font-weight:600;">Bhayander East</div>
+          <div style="font-weight:700;color:#c99a30;font-size:0.95rem;">${STORES[1].phonePretty}</div>
+        </div>
+        <i class="fas fa-phone" style="color:#e8b84b;"></i>
+      </a>`;
+    mobileNav.parentNode.appendChild(contact);
+  }
+
+  /* 9d. Replace minimal page footers with full contact footer */
+  const footer = document.querySelector('footer.footer');
+  if (footer && !footer.querySelector('.site-contact-footer')) {
+    // Detect minimal footer (just a single <p>) vs the full homepage footer
+    const isMinimal = footer.querySelectorAll('.footer-grid, .footer-brand').length === 0;
+    if (isMinimal) {
+      const isPagesDir = location.pathname.includes('/pages/');
+      const home = isPagesDir ? '../index.html' : 'index.html';
+      const storeLink = isPagesDir ? 'store-locator.html' : 'pages/store-locator.html';
+      const apptLink = isPagesDir ? 'appointment.html' : 'pages/appointment.html';
+      const block = document.createElement('div');
+      block.className = 'site-contact-footer';
+      block.innerHTML = `
+        <div class="container" style="padding:50px 0 30px;">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px;margin-bottom:32px;">
+            <div>
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+                <img src="${isPagesDir ? '../' : ''}logo.png" alt="Saawariya Opticals" style="height:40px;">
+                <span style="font-family:Poppins;font-weight:700;font-size:1.05rem;color:var(--primary);">Saawariya Opticals</span>
+              </div>
+              <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.6;">15+ years of trusted eyewear &amp; eye-care service in Bhayander.</p>
+            </div>
+            <div>
+              <h4 style="font-family:Poppins;color:var(--primary);font-size:1rem;margin-bottom:14px;">📍 Bhayander West</h4>
+              <p style="color:var(--text-secondary);font-size:0.88rem;line-height:1.6;margin-bottom:10px;">Shop No. 11, Kamala Park,<br>Opp. Rajasthan Hall, 60 Ft Rd</p>
+              <a href="tel:+91${STORES[0].phone}" style="display:inline-flex;align-items:center;gap:8px;color:#10b981;font-weight:700;font-size:0.95rem;"><i class="fas fa-phone"></i> +91 ${STORES[0].phonePretty}</a><br>
+              <a href="https://wa.me/91${STORES[0].phone}" target="_blank" style="display:inline-flex;align-items:center;gap:8px;color:#25d366;font-weight:600;font-size:0.88rem;margin-top:6px;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+            <div>
+              <h4 style="font-family:Poppins;color:var(--primary);font-size:1rem;margin-bottom:14px;">📍 Bhayander East</h4>
+              <p style="color:var(--text-secondary);font-size:0.88rem;line-height:1.6;margin-bottom:10px;">Shop No. 21, Janki Heights,<br>Near Mithalal Jain Bungalow</p>
+              <a href="tel:+91${STORES[1].phone}" style="display:inline-flex;align-items:center;gap:8px;color:#c99a30;font-weight:700;font-size:0.95rem;"><i class="fas fa-phone"></i> +91 ${STORES[1].phonePretty}</a><br>
+              <a href="https://wa.me/91${STORES[1].phone}" target="_blank" style="display:inline-flex;align-items:center;gap:8px;color:#25d366;font-weight:600;font-size:0.88rem;margin-top:6px;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+            <div>
+              <h4 style="font-family:Poppins;color:var(--primary);font-size:1rem;margin-bottom:14px;">Quick Links</h4>
+              <div style="display:flex;flex-direction:column;gap:8px;font-size:0.9rem;">
+                <a href="${home}" style="color:var(--text-secondary);">Home</a>
+                <a href="${storeLink}" style="color:var(--text-secondary);">Store Locator</a>
+                <a href="${apptLink}" style="color:var(--text-secondary);">Book Appointment</a>
+                <p style="color:var(--text-muted);font-size:0.82rem;margin-top:4px;"><i class="fas fa-clock"></i> Mon–Sun · 10 AM – 9 PM</p>
+              </div>
+            </div>
+          </div>
+          <div style="text-align:center;padding-top:24px;border-top:1px solid var(--border-light);color:var(--text-muted);font-size:0.85rem;">
+            © 2026 Saawariya Opticals · "We help you look better"
+          </div>
+        </div>`;
+      footer.innerHTML = '';
+      footer.style.background = '#f8f9ff';
+      footer.style.borderTop = '1px solid var(--border-light)';
+      footer.appendChild(block);
+    }
+  }
 })();
